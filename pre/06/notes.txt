@@ -1,0 +1,10 @@
+Chapter 07
+- while statement
+- for loop; more efficient than while loop (initalizer, coniditon, and the update)
+- encapuslation and generalization: 
+	1. write a few lines of code and test them in main
+	2. when they are working, wrap them in a new method and test them again (encapsulation)
+	3. replace literal values with variables and paramters (generalization)
+- do while statement (don't really understand this)
+- break exits the loop
+- continue moves to the next iteration
