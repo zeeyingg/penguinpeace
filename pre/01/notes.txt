@@ -1,0 +1,4 @@
+01
+- The machine compiles the code first (translating it into machine language) before being able to read the code
+- This is done thru javac File.java; java File runs the code
+- System.out.println prints the input and a new line; removing the ln prints the ln on the same ln
