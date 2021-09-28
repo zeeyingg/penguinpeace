@@ -1,0 +1,26 @@
+Chapter 02
+- Declaring variables format: Type message (i.e. int x) Not allowed to use variable names, such as public, class, static, void, and int
+- You can declare and intialize on the same line\
+- Java has similar types to Python (int, double, boolean, String) and simialr operators
+- Use the Scanner class to take in an input
+- FINAL declares a constant
+- Format text in Java with printf, though I'm not sure how to properly do that
+- Floating-point numbers represents fractions and integers
+	- Java automatically converts from double to int
+	- There are multiple problems that can arise, so you should always assign a floating-point val to floating-point variable
+- Types of errors: compile-time errors, run-time errors, logic error
+
+
+Chapter 033 
+Program structure
+1. Package
+2. Class
+3. Method
+4. Statement
+5. Expression
+6. Token
+
+- You must have public static
+- public = files and classes have permission to access
+- static is a class
+- functions and programs are only run inside public static main 
