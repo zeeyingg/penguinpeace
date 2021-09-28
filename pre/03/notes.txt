@@ -1,0 +1,11 @@
+Chapter 04
+
+- **Class** names begin with a capital letter. `NewLine`
+
+- **Method** names use camel case. `newLine`
+
+Why create different methods?
+- Makes code easier to read and understand
+- Eliminate repetitive code
+- Allows you to focus on each sub-problem in isolation, and then compose them into a complete solution
+
