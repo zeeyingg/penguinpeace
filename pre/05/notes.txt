@@ -1,0 +1,4 @@
+Chapter 06
+
+- method overloading: having different arguments for the same function
+- recursive functions and is structured the same way as Python
