@@ -1,0 +1,9 @@
+Chapter 8
+
+- type[]name = new type[number of elements] creates a new array
+- java arrays acts the same way as a python list doesn
+- cannot negative index
+- access array length by calling arrayname.length
+- enhanced loop in python (need more clarification)
+- copyOf copies an array (i.e. double[] = Arrays.copyOf(a, 3);
+- Transversal, Reduce, and Search; ways of looking thru elements in an array
