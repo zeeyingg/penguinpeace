@@ -11,7 +11,7 @@ Chapter 02
 - Types of errors: compile-time errors, run-time errors, logic error
 
 
-Chapter 033 
+Chapter 03 
 Program structure
 1. Package
 2. Class
