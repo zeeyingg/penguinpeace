@@ -1,7 +1,9 @@
+----SCHEME
+display "Hello, world!"
 
+----NLOGO
+print "Hello, world!"
 
 -----PYTHON
 print("Hello, world!")
 
-Output:
-"Hello world!"
