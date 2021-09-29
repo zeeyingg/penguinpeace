@@ -1,0 +1,24 @@
+
+
+SCHEME
+write "Hello, world!"
+
+Output:
+#<procedure:mwrite>
+"Hello, world!"
+
+
+
+NETLOGO
+"Hello, world!"
+
+Output:
+"Hello, world!"
+
+
+
+PYTHON
+print("Hello, world!")
+
+Output:
+"Hello, world!"
