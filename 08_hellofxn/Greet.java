@@ -5,7 +5,6 @@ HW08 -- Refactor Freshie Zero/Java/Using string concatenation to greet
 2021-10-01
 
 
-
 DISCOVERIES:
 - cocatenate strings using "+" operand
 - java class names are case-senstive and must align with the file name in order to be compiled and run
