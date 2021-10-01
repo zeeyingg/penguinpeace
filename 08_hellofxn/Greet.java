@@ -1,4 +1,10 @@
 /*
+Ziying Jian, Scruffy Jr.
+APCS
+HW08 -- Refactor Freshie Zero/Java/Using string concatenation to greet
+2021-10-01
+
+
 
 DISCOVERIES:
 - cocatenate strings using "+" operand
