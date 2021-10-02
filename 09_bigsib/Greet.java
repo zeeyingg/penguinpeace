@@ -1,4 +1,8 @@
 /*
+Ziying Jian, Scruffy Jr.
+APCS
+HW09 -- What Are BigSibs Good For?/Java/Invoking a class in a different method
+2021-10-01
 
 DISCOVERIES:
 - BigSib is a class that stores the method greet; can be compiled without the main() method
