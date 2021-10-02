@@ -15,12 +15,9 @@ I know there is a shorter, more efficient way of cocatenating strings using f-st
 public class Greet {
 	public static void main (String[] args){
 	//	System.out.println("No hablo queso");
-		System.out.println(greet("Ziying"));
-		System.out.println(greet("Kartic"));
-		System.out.println(greet("Ari"));
+		BigSib.greet("Ziying"));
+		BigSib.greet("Kartic"));
+		BigSib.greet("Ari"));
 	}				
 
-	public static String greet (String name){
-		return("Why, hello there, " + name + ". How do you do?");
-	}
 }
