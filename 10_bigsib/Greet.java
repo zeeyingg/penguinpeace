@@ -1,13 +1,13 @@
 /*
 
-Ziying Jian, Scruffy
+moneyhags, Ziying Jian, Scruffy
 APCS
 HW10 -- Refactor Big Sib One/Java/Investigating syos
 2005-10-04
 
-DISCOVERIES
+DISCOVERIES:
 
-UNRESOLVED MYSTERIES
+UNRESOLVED MYSTERIES:
 
 */
 
