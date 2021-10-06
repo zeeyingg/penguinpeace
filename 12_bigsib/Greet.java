@@ -3,7 +3,7 @@
 Ziying Jian, Scruffy Jr.
 APCS
 HW12 -- On Elder Individualty and the Elimination of Radio Fuzz
-2005-10-05
+2021-10-05
 
 DISCOVERIES:
 * an instance variable can be tied to a class
