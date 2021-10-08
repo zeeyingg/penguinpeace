@@ -1,5 +1,5 @@
 /*
-TNPG: ziggy's fishball amoebaly rangers (Ziying Jian, Scruffy, Emily Ortiz, Applesauce
+TNPG: ziggy's fishball amoebaly rangers (Emily Ortiz - Applesauce; Ziying Jian - Scruffy; Faiza Huda - Turthful Tom; Nina Jiang - Alpaca)
 APCS
 HW14 - Customize Your Creation
 2021-10-07
@@ -20,11 +20,6 @@ public class Greet {
 	BigSib grizz = new BigSib();
 	BigSib dotCom = new BigSib();
 	BigSib tracy = new BigSib();
-
-        BigSib richard = new BigSib();
-        BigSib grizz = new BigSib();
-        BigSib dotCom = new BigSib();
-        BigSib tracy = new BigSib();
 
         greeting = richard.greet("freshman");
         System.out.println(greeting);
