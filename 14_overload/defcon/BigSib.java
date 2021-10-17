@@ -20,12 +20,12 @@ public class BigSib{
 	String helloMsg;
 
 	// constructor
-  public BigSib(){
-	helloMsg = "Word up";
-  }
+	public BigSib(){
+		helloMsg = "Word up";
+ 	 }	
 
- public String greet(String name){
-    	return( helloMsg + " " + name );
+	public String greet (String name){
+    		return( helloMsg + " " + name );
   }
  
 }
