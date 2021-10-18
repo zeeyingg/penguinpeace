@@ -7,7 +7,6 @@
 DISCOVERIES:
 - Only static methods are executable
 
-
 QCC:
 - Can you invoke a method in the same class without using static?
 
@@ -40,23 +39,11 @@ public class BankAccount {
 
     public int setPin(int pinInput){
        return  pin = pinInput;
-        // consider adding a char limit to pin
     }
 
     public int setAccNumber(int accInput){
-       checkAccNumber(accInput);
 	return  accNumber = accInput;
     }
-
-	// helper function to check whether account # are correct digits
-	public void checkAccNumber(int accInput){
-	if (100000000 <= accInput <= 99999998) {
-		return accInput;
-	} else { 
-		accNumber = 99999999;
-		return ("Your number must be a 9-digit value.");	
-		}
-	}
 
     public String accountInfo(){
 	String retStr = "\nAccount info: \n=============";
@@ -69,14 +56,6 @@ public class BankAccount {
    	 return retStr;
     }
 
-    /* EXPECTED OUTPUT:
-
-    BANK ACCOUNT INFO
-    Name: Rich Rick 
-    Account #: 1
-    Balance: 100.0
-
-    */
     
     // withdraws amt if PIN & pswrd are both correct 
     public void withdraw(double amount, int pinInput, String passwordInput){
