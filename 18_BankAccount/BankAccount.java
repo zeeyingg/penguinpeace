@@ -6,7 +6,6 @@
 /*
 DISCOVERIES:
 - Only static methods are executable
-- 
 
 QCC:
 - Can you invoke a method in the same class without using static?
@@ -22,12 +21,14 @@ System.out.println(objName), and checking whether there is a valid output in the
 
 
 public class BankAccount {
+    // instance vars    
     private String name;
     private String password;
     private int pin;
     private int accNumber;
     private double balance;
 
+    // methods
     public void setFullName(String nameInput){
         name = nameInput;
     }
@@ -60,9 +61,10 @@ public class BankAccount {
     Balance: 100.0
 
     */
-
+    
+    // withdraws amt if PIN & pswrd are both correct 
     public void withdraw(double amount, int pinInput, String passwordInput){
-        if (pinInput == pin && passwordInput == password) { // requires both PIN and pswrd to be correct
+        if (pinInput == pin && passwordInput == password) { 
             if (amount > balance) { // checks for exceeding amounts
                 System.out.println("Your amount is invalid. Please retry.");
             } else {
@@ -75,6 +77,7 @@ public class BankAccount {
         }
     }
 
+    // deposits amt if PIN is correct
     public void deposit(double amount, int pinInput){
         if (pinInput == pin){ // requires only PIN to be correct
             if (amount < 0) { // checks for negative amounts
@@ -90,6 +93,7 @@ public class BankAccount {
         }
     }
 
+    // deposits amt if pswrd is correct
     public void deposit(double amount, String passwordInput){
         if (passwordInput == password){ // requires only psswrd to be correct
             if (amount < 0) {
@@ -119,20 +123,26 @@ public class BankAccount {
     System.out.println();
     System.out.println("Depositing: ");
     account.deposit(100, 123456);
+        
     System.out.println("Depositing with negative amount: ");
     account.deposit(-100,123456);
+        
     System.out.println("Depositing with wrong PIN: ");
     account.deposit(100, 0000);
+        
     System.out.println("Depositing with wrong password: ");
     account.deposit(100, "wrongPass");
 
     System.out.println();
     System.out.println("Withdraw: ");
     account.withdraw(100, 123456, "123456");
+        
     System.out.println("Withdrawing with negative amount: ");
     account.withdraw(600, 123456, "123456");
+        
     System.out.println("Withdrawing with wrong PIN: ");
     account.withdraw(2, 0000, "123456");
+        
     System.out.println("Withdrawing with wrong password: ");
     account.withdraw(2, 123456, "wrongPass");
 
