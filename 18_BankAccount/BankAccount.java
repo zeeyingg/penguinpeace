@@ -6,7 +6,6 @@
 /*
 DISCOVERIES:
 - Only static methods are executable
-- 
 
 QCC:
 - Can you invoke a method in the same class without using static?
