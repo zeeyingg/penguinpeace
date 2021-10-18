@@ -7,6 +7,7 @@
 DISCOVERIES:
 - Only static methods are executable
 
+
 QCC:
 - Can you invoke a method in the same class without using static?
 
@@ -29,34 +30,49 @@ public class BankAccount {
     private double balance;
 
     // methods
-    public void setFullName(String nameInput){
-        name = nameInput;
+    public String setFullName(String nameInput){
+       return  name = nameInput;
     }
 
-    public void setPassword(String passwordInput){
-        password = passwordInput;
+    public String  setPassword(String passwordInput){
+       return  password = passwordInput;
     }
 
-    public void setPin(int pinInput){
-        pin = pinInput;
+    public int setPin(int pinInput){
+       return  pin = pinInput;
         // consider adding a char limit to pin
     }
 
-    public void setAccNumber(int accInput){
-        accNumber = accInput;
+    public int setAccNumber(int accInput){
+       checkAccNumber(accInput);
+	return  accNumber = accInput;
     }
 
-    public void accountInfo(){
-        System.out.println("BANK ACCOUNT INFO");
-        System.out.println("Name: " + name);
-        System.out.println("Account #: "+ accNumber);
-        System.out.println("Balance: " + balance);
+	// helper function to check whether account # are correct digits
+	public void checkAccNumber(int accInput){
+	if (100000000 <= accInput <= 99999998) {
+		return accInput;
+	} else { 
+		accNumber = 99999999;
+		return ("Your number must be a 9-digit value.");	
+		}
+	}
+
+    public String accountInfo(){
+	String retStr = "\nAccount info: \n=============";
+	retStr += "\n Name: " + name;
+	retStr = retStr + "\nPassword: " + password;
+   	 retStr = retStr + "\nPIN: " + pin;
+   	 retStr = retStr + "\nAccount Number: " + accNumber;
+   	 retStr = retStr + "\nBalance: " + balance;
+   	 retStr = retStr + "\n=======================";
+   	 return retStr;
     }
 
     /* EXPECTED OUTPUT:
 
     BANK ACCOUNT INFO
-    Name: Rich Rick
+    Name: Rich Rick 
     Account #: 1
     Balance: 100.0
 
@@ -112,20 +128,20 @@ public class BankAccount {
     public static void main(String[] args) {
     BankAccount account = new BankAccount();
 
-    account.name = "Rich Rick";
-    account.password = "123456";
-    account.pin = 123456;
-    account.accNumber = 1;
-    account.balance = 100.0;
+	account.setFullName("Rich Rick");
+	account.setPassword("123456");
+	account.setPin(1234);
+	account.setAccNumber(1); // invoking a method through an object
+				// inspired by Team Nacho Patcho
 
-    account.accountInfo();
+    System.out.println(account.accountInfo());
 
     System.out.println();
     System.out.println("Depositing: ");
-    account.deposit(100, 123456);
+    account.deposit(100.0, 1234);
         
     System.out.println("Depositing with negative amount: ");
-    account.deposit(-100,123456);
+    account.deposit(-100,1234);
         
     System.out.println("Depositing with wrong PIN: ");
     account.deposit(100, 0000);
@@ -135,10 +151,10 @@ public class BankAccount {
 
     System.out.println();
     System.out.println("Withdraw: ");
-    account.withdraw(100, 123456, "123456");
+    account.withdraw(100, 1234, "123456");
         
     System.out.println("Withdrawing with negative amount: ");
-    account.withdraw(600, 123456, "123456");
+    account.withdraw(600, 1234, "123456");
         
     System.out.println("Withdrawing with wrong PIN: ");
     account.withdraw(2, 0000, "123456");
