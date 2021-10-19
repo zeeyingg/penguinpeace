@@ -12,8 +12,8 @@ and you can only denote more than one inequality through the conditional, &&
 - void, as a return type, means nothing is returned
 
 QCC:
-- Why does the number go up until 999999998 and not 999999999? 
-- How can authenticate() be used as an actual authenticator? 
+- Why does the number go up until 999999998 and not 999999999?
+- How can authenticate() be used as an actual authenticator?
 - What steps do we need to take in order to create a functional sign-in page?
 
 */
@@ -53,7 +53,7 @@ public class BankAccount<pinInput> {
 
     // sets and checks acc #
     public long setAccNumber(long accInput){
-        checkAccNumber(accInput); // checks digits 
+        checkAccNumber(accInput); // checks digits
         return accNumber = accInput;
     }
 
@@ -70,7 +70,7 @@ public class BankAccount<pinInput> {
     // returns acc info
     public String accountInfo(){
         String retStr = "\nAccount info: \n=============";
-        retStr += "\n Name: " + name;
+        retStr += "\nName: " + name;
         retStr = retStr + "\nPassword: " + password;
         retStr = retStr + "\nPIN: " + pin;
         retStr = retStr + "\nAccount Number: " + accNumber;
@@ -154,21 +154,22 @@ public class BankAccount<pinInput> {
         account.setPin(1234);
         account.setAccNumber(123456789);// invoking a method through an object
         // inspired by Team Nacho Patcho
-        
-	System.out.println("=================");
-	System.out.println(account.authenticate(123456789, "1234"));
+
+        System.out.println("\nAUTHENTICATION *************************");
+        System.out.println(account.authenticate(123456789, "1234"));
+        System.out.println("\nACCOUNT *************************");
         System.out.println(account.accountInfo());
 
 
-        System.out.println("=================");
-        System.out.println("Depositing: ");
+        System.out.println("\nDEPOSITING *************************");
+        System.out.println("Depositing 100.0... should be 100.0: ");
         account.deposit(100.0, 1234);
         System.out.println("Depositing with negative amount: ");
         account.deposit(-100, "1234");
 
 
-        System.out.println("=================");
-        System.out.println("Withdraw: ");
+        System.out.println("\nWITHDRAWING *************************");
+        System.out.println("Withdrawing 100.0... should be 0.0: ");
         account.withdraw(100, 1234, "1234");
         System.out.println("Withdrawing with more than you have in your account: ");
         account.withdraw(600, 1234, "1234");
