@@ -5,10 +5,17 @@
 
 /*
 DISCOVERIES:
--
+- A boolean expression always returns a true or false value
+- Unlike Python where you could do num1 < x < num2, Java doesn't understand that syntax
+and you can only denote more than one inequality through the conditional, &&
+- \n denotes a line break
+- void, as a return type, means nothing is returned
 
 QCC:
--
+- Why does the number go up until 999999998 and not 999999999? 
+- How can authenticate() be used as an actual authenticator? 
+- What steps do we need to take in order to create a functional sign-in page?
+
 */
 
 
@@ -31,7 +38,7 @@ public class BankAccount<pinInput> {
     }
 
     public int setPin(int pinInput){
-        checkPinNumber(pinInput); // digit quals
+        checkPinNumber(pinInput); // checks digits
         return  pin = pinInput;
     }
 
@@ -46,7 +53,7 @@ public class BankAccount<pinInput> {
 
     // sets and checks acc #
     public long setAccNumber(long accInput){
-        checkAccNumber(accInput);
+        checkAccNumber(accInput); // checks digits 
         return accNumber = accInput;
     }
 
@@ -147,21 +154,23 @@ public class BankAccount<pinInput> {
         account.setPin(1234);
         account.setAccNumber(123456789);// invoking a method through an object
         // inspired by Team Nacho Patcho
-        System.out.println(account.authenticate(123456789, "1234"));
+        
+	System.out.println("=================");
+	System.out.println(account.authenticate(123456789, "1234"));
         System.out.println(account.accountInfo());
 
 
-        System.out.println();
+        System.out.println("=================");
         System.out.println("Depositing: ");
         account.deposit(100.0, 1234);
         System.out.println("Depositing with negative amount: ");
         account.deposit(-100, "1234");
 
 
-        System.out.println();
+        System.out.println("=================");
         System.out.println("Withdraw: ");
         account.withdraw(100, 1234, "1234");
-        System.out.println("Withdrawing with negative amount: ");
+        System.out.println("Withdrawing with more than you have in your account: ");
         account.withdraw(600, 1234, "1234");
 
 
