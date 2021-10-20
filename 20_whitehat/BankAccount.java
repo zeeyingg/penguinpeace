@@ -84,7 +84,7 @@ public class BankAccount {
 
 	// function to add a given amount of money to the balance
 	public void deposit( double amount ) {
-		balance += amount;
+		 balance += amount;
 	}
 
 	// function to remove a given amount of money from the balance
