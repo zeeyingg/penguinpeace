@@ -1,3 +1,8 @@
+// Team Up2U (Ziying Jian, Emily Ortiz, Kartik Vanjani, Scruffy, Applesauce, Krrish)
+// APCS
+// HW21 - STAtisTically Speaking...
+// 2021-10-21
+
 /*
 DISCO
 * Using a 0 as a test case in both geoMean examples resulted in unexpected outputs.
@@ -14,6 +19,7 @@ QCC
   }
 Why?
 * And how come that error didn't manifest with 2 parameter geoMean functions?
+* How to change a double to an int without typecasting? Or is there another approach to this assignment we overlooked?
 
 */
 
