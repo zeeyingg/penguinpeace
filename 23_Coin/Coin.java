@@ -127,20 +127,6 @@ public class Coin {
             return rtr;
         }
 
-    public void assignValue(){
-        if (name == "penny"){
-            value = 1;
-        } else if (name == "nickel"){
-            value = 5;
-        } else if (name == "dime"){
-            value = 10;
-        } else if (name == "quarter"){
-            value = 25;
-        } else if (name == "dollar") {
-            value = 100;
-        }
-        }
-
     } //end class
 
 
