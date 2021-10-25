@@ -24,11 +24,11 @@ public class Driver {
 
         int numHeads, numMatches; // number of heads we want, number of matches we want
         int matchCtr = 0; // current match counter
-        numHeads = 1;
-        numMatches = 10;
+        numHeads = 10;
+        numMatches = 65536;
 
         while( (numHeads >= yours.getHeadsCtr() )
-                || ( numMatches > matchCtr )
+                || ( numMatches == matchCtr )
                 || (matchCtr >= 65536 && matchCtr % 2005 == 0) )
         {
             if (yours.equals(wayne)) {
