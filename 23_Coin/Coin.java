@@ -75,8 +75,11 @@ public class Coin {
          postcond: Coin's attribs reset to starting vals
          ***/
         public void reset( String s, double d ) {
-            // other stuff
-            upFace = "heads"; // coins are heads by default
+            flipCtr = 0;
+            headsCtr = 0;
+            tailsCtr = 0;
+            bias = d;
+            upFace = s; // coins are heads by default
         }
 
 
