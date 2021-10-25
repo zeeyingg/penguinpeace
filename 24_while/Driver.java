@@ -33,7 +33,7 @@ public class Driver {
         {
             if (yours.equals(wayne)) {
 //                System.out.println("Matchee matchee!");
-                numMatches++;
+                matchCtr++;
             } else {
 //                System.out.println("No match. Firestarter you can not be.");
             }
