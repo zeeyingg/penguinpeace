@@ -24,16 +24,15 @@ POST-v0 MODS:
 
 public class Driver {
     public static void main(String[] args) {
+        
+        // intializing
         Coin yours = new Coin("quarter");
         Coin wayne = new Coin("dollar", "heads");
-        
-        
         int matchCtr = 0// or y
         int x = 10;
 
         yours.reset("heads", 0.5);
         wayne.reset("heads", 0.5);
-        // x heads
         while ( x >= yours.getHeadCtr() ){
             yours.flip();
             x++;
