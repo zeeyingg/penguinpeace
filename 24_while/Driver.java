@@ -46,18 +46,31 @@ public class Driver {
         System.out.println("yours: " + yours);
         System.out.println("wayne: " + wayne);
 
+        //test equals() method
+        if ( yours.equals(wayne) ) {
+            System.out.println( "Matchee matchee!" );
+        }
+        else {
+            System.out.println( "No match. Firestarter you can not be." );
+        }
+        
+        //test matches
+        
+        int matchCtr = 0// or y
+        int x = 10;
 
         yours.reset("heads", 0.5);
         wayne.reset("heads", 0.5);
-
-        int matchCtr = 0; // current match counter
-
-        while (matchCtr <= 65536) {
+        // x heads
+        while ( x >= yours.getHeadCtr() ){
             yours.flip();
-            wayne.flip();
-            matchCtr++;
-        }
-        while ( matchCtr % 2005 != 0 ) {
+            x++;
+        } System.out.println("Should have " + x + "heads." + "Has: " yours.getHeadCtr() + " heads.");
+        
+        
+        yours.reset("heads", 0.5);
+        wayne.reset("heads", 0.5);
+        while ( matchCtr <= 65536 | matchCtr % 2005 != 0 ) {
             yours.flip();
             wayne.flip();
             if (yours.equals(wayne)) {
@@ -69,7 +82,7 @@ public class Driver {
         }
         System.out.println("Total flips: " + yours.getFlipCtr() +
                 "\nTotal matches: " + matchCtr +
-                "\nTotal heads: " + wayne.getHeadsCtr());
+                "\nTotal heads: " + yours.heasCtr());
 
     } // main
 }
