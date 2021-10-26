@@ -24,37 +24,9 @@ POST-v0 MODS:
 
 public class Driver {
     public static void main(String[] args) {
-
-        //test default constructor
-        Coin mine = new Coin();
-
-        //test 1st overloaded constructor
         Coin yours = new Coin("quarter");
-
-        //test 2nd overloaded constructor
         Coin wayne = new Coin("dollar", "heads");
-
-        //test toString() methods of each Coin
-        System.out.println("mine: " + mine);
-        System.out.println("yours: " + yours);
-        System.out.println("wayne: " + wayne);
-
-        //test flip() method
-        System.out.println("\nAfter flipping...");
-        yours.flip();
-        wayne.flip();
-        System.out.println("yours: " + yours);
-        System.out.println("wayne: " + wayne);
-
-        //test equals() method
-        if ( yours.equals(wayne) ) {
-            System.out.println( "Matchee matchee!" );
-        }
-        else {
-            System.out.println( "No match. Firestarter you can not be." );
-        }
         
-        //test matches
         
         int matchCtr = 0// or y
         int x = 10;
@@ -67,7 +39,7 @@ public class Driver {
             x++;
         } System.out.println("Should have " + x + "heads." + "Has: " yours.getHeadCtr() + " heads.");
         
-        
+        // test matches
         yours.reset("heads", 0.5);
         wayne.reset("heads", 0.5);
         while ( matchCtr <= 65536 | matchCtr % 2005 != 0 ) {
