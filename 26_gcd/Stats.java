@@ -42,9 +42,6 @@ public class Stats {
                 currentGCD = i;
             }
             i++;
-        }
-        if (a == b) {
-            currentGCD = a;
         } return currentGCD;
     }
 
