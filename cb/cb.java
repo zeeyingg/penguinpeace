@@ -1,3 +1,9 @@
+// Ziying Jian
+// APCS
+// HW28 -- PPMP
+// 2021-11-1
+// time spent: 2 hrs
+
 public class cb {
 
     public static String helloName(String name) {
