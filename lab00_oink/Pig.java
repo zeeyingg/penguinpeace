@@ -96,9 +96,9 @@ private static final String VOWELS = "aeiouAEIOU";
     }
     if (beginsWithUpper(w)) {
         ansCap = (ans.substring(0, 1).toUpperCase() + (ans.substring(1)).toLowerCase());
-        return ansCap + puncHere + "\n";
+        return ansCap + puncHere + " ";
     }
-    return ans + puncHere + "\n";
+    return ans + puncHere + " ";
 	}
 
     public static void main(String[] args) {
