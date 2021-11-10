@@ -3,7 +3,7 @@
  * APCS
  * L00 -- v2
  * 2021-11-09
- * time spent: 1 hr
+ * time spent: 2 hr
  *
  * DISCO:
  * If the return type is boolean, you can return the boolean expression.
@@ -103,9 +103,9 @@ private static final String VOWELS = "aeiouAEIOU";
 
     public static void main(String[] args) {
 	    Scanner in = new Scanner(System.in);
-	    while (in.hasNext()) {
+	    while (in.hasNextLine()) {
 		    System.out.print(engToPig(in.next()));
 	    }
-    }//end main()
+    }//end main()version
 
 }//end class Pig
