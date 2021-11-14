@@ -103,9 +103,9 @@ private static final String VOWELS = "aeiouAEIOU";
 
     public static void main(String[] args) {
 	    Scanner in = new Scanner(System.in);
-	    while (in.hasNextLine()) {
+	    while (in.hasNext()) {
 		    System.out.print(engToPig(in.next()));
-	    }
+    } System.out.println("\n");
     }//end main()version
 
 }//end class Pig
