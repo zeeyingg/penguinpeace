@@ -12,6 +12,7 @@
 * QCC:
 * 1. After your first input, you get your output on the next line. However, when putting in your next input, its on the same line as your previous output.
 * Why, and how can we change that?
+* 2. How do you fix the runtime error in the scanner demo?
 * 
 * WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO:
 * After it gets to the last word, the second next() call tells Java to move the cursor to the next
