@@ -1,33 +1,34 @@
 /**
  Nora Miller, Gloria Lee, Ziying Jian (3 Lucky Duckies)
  APCS
- HW34 -- intro to arrays
- 2021-11-14
- time spent: 2 hrs
+ HW35 
+ 2021-11-15
+ time spent: .5 hrs
 
- QCC: Can the linear search method be done recursively using getSlice? What is the most efficient way to linear search recursively through an array and the most
- efficient way to return the number of occurences of a target in an array recursively?
+ DISCO:
+ - Math.random returns a floating-point number in the range 0 to less
+than 1.
+ - By typecasting, the result is converted to an int.
+ - Rounds the result to the nearest decimal place and gives a whole number.
+ - Getting a random number between two values: Math.random() * (max - min) + min;
+ - Max is exclusive, min is inclusive
 
- DISCO: We tried to use recursion to slice the array in our recursive linear search method by reducing the array length by one every time we went through the
- recursion, but this didn't work because instead of returning the index of the first occurence in the original array, it returned the first occurence index in the new
- sliced array. We didn't know how to fix this, so we couldn't use this method. Instead, we used a helper method which we recursively ran through, but we aren't sure
- if that also counts as recursion.
+QCC:
+ - In Java, why is there a continuity of min number being inclusive but max number
+ being exclusive? Does it have something to do with starting at 0?
+ - How do we generate integers excluding 0?
+ - How to generate random ints from 10-20?
 
- - Reminder to self: generation of random stuff is a static method - you need to create a random generator first.
- - It seems like I can't redefine items in an array within a loop.
  */
-
-import java.util.Random; 
 
 public class Loopier {
 
 	public static int[] randArray(int[] array) { // seems easier to take the array being modified as an argument than
 		// to do so as the thing invoking the function, because I don't know how
 		// to access the contents of the item invoking a method
-		Random randomGen = new Random();
 		int[] newArray = new int[array.length];
 		for (int i = 0; i < array.length; i++) {
-			newArray[i] = randomGen.nextInt(5); // it didn't specify the range for the number, but 100 is prob good for now?
+			newArray[i] = (int) ( Math.random()*2 );
 		}
 		return newArray;
 	}
@@ -130,10 +131,10 @@ public class Loopier {
 		int[] a = new int[10]; 
 		a = randArray(a); 
 		System.out.println(printArray(a));
-		System.out.println("All targets are 2.");
-		System.out.println("Linear Search Iterative: " + linSearch(a, 2));
-		System.out.println("Linear Search Recursion: " + linSearchR(a, 2));
-		System.out.println("Frequency Iterative: " + freq(a, 2));
-		System.out.println("Frequency Recursion " + freqR(a, 2));
+		System.out.println("All targets are 1.");
+		System.out.println("Linear Search Iterative: " + linSearch(a, 1));
+		System.out.println("Linear Search Recursion: " + linSearchR(a, 1));
+		System.out.println("Frequency Iterative: " + freq(a, 1));
+		System.out.println("Frequency Recursion " + freqR(a, 1));
 	}
 }
