@@ -12,6 +12,7 @@ than 1.
  - Rounds the result to the nearest decimal place and gives a whole number.
  - Getting a random number between two values: Math.random() * (max - min) + min;
  - Max is exclusive, min is inclusive
+ - When typecasting, the thing that's being typecasted must always be wrapped around in ().
 
 QCC:
  - In Java, why is there a continuity of min number being inclusive but max number
