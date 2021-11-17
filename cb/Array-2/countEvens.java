@@ -1,4 +1,6 @@
 public class countEvens {
+
+/*  Return the number of even ints in the given array.  */
     public static int countEvens(int[] nums) {
         int numEvens = 0;
         for (int x : nums) {
