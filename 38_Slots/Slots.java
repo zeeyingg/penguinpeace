@@ -117,6 +117,8 @@ public class Slots {
 
     Slots machine01 = new Slots();
     Slots machine02 = new Slots();
+	  
+    System.out.println(machine01);
 
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //test to verify slot machines function indepently
