@@ -1,0 +1,45 @@
+
+Ziying Jian
+APCS
+HW36 -- All Quacked Up
+2021-11-20
+time spent: 0.5 hrs
+
+
+Compile-time errors: syntax errors
+- Generally good to develop incrementally
+- Fix the first error message!
+- Use the error message as your guideline! Look broadly at your program
+- If you’re stuck, check to make sure the program you’re editing and the program the compiler is compiling are the same
+- Make a backup of the file, delete about half the code from your file, and slowly put back half of the deleted code and compile each time. If the program doesn’t compile, the err must be in what remains. 
+- Be skeptical of the solutions the error messages provide
+
+
+Run-time errors:
+“hanging” - program is caught in an infinite loop or recursion
+- Add print statements before and after the loop
+	- Entering/Exiting the loop
+	- Display the arguments each method receives
+- StackOverflowError: check to see if you have a base case!
+- NullPointerException: accessing an I.V. or method of an object that is null 
+	- Common when you declare a variable with an array type
+- ArrayIndexOutOfBounds: accusing an array with negative or greater than array.length -1 
+- StackOverflowError
+- FileNotFoundException: Java didn’t find the file it was looking for
+- ArithmeticException: arithmetic operation disaster
+- Simplify the output or the program
+	- Scale down the problem the program is working on
+	- Remove unnecessary parts of the code and reorganize if necessary 
+
+
+Logic errors: program doesn’t work
+- Understand what the program is actually doing
+	- Is it producing an unexpected effect or is there something that’s it suppose to do that doesn’t seem to be happening
+- Simplify your code
+- Println - displays output immediately
+- If you’re really stuck, get away from the computer for a few minutes
+	- Or bring another pair of eyes
+	- SPEAK WITH YOUR DUCKY!
+
+
+AFTER you’ve found the bug, take a minute to think about what kind of bug it was, what made the error, how the error came about, and what you could have done to find it faster. Next time, you’ll find the bug quicker and better.
