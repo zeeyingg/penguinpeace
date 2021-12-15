@@ -16,6 +16,7 @@
     - Is there a categorical way of dealing with execptions that isn't a try-catch loop (or extraordinarily long?)
     - Why would have an if/else statement not have accomplished to the same degree as the try/catch block?
  ***/
+
 import java.util.Scanner;
 
 public class GuessNumber
