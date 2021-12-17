@@ -2,8 +2,6 @@
 3 Lucky Duckies - Gloria Lee, Ziying Jian, Nora Miller
 APCS
 HW 48_search
-   class BinSearch
-   Binary search on array of Comparables
 2021 - 12 - 15
 Time Spent: 1.5 h
 
