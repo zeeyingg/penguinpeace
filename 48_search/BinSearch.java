@@ -142,20 +142,14 @@ public class BinSearch
     System.out.println( binSearch(iArr2,8) );
     System.out.println( binSearch(iArr2,13) );
     System.out.println( binSearch(iArr2,42) );
-    //search for 43 in array
     System.out.println( binSearch(iArr2,43) );
     System.out.println( "now testing binSearch on iArr3..." );
     System.out.println( binSearch(iArr3,4) );
     System.out.println( binSearch(iArr3,8) );
     System.out.println( binSearch(iArr3,5) );
-    //search for 43 in array
     System.out.println( binSearch(iArr3,43) );
     /*----------------------------------------------------
     ====================================================*/
-
-
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
   }//end main()
 
 }//end class BinSearch2
