@@ -17,6 +17,9 @@
  * DISCO
  * We generally use size() instead of length() to refer to the no. of elements in an ArrayList
  * p - 1 < size() is different from p < size() -1
+ * The issue of pass by value vs pass by reference presented itself here.
+ * Because Java passes references by value, you can't just shallow copy an ArrayList and change that.
+ * Instead, you have to copy each element one by one into the new array.
  *
  * QCC
  * q0: If a pass requires no swaps, what do you know?
