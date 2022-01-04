@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// 3 Lucky Duckies - Gloria Lee, Nora Miller, Ziying Jian
+// APCS pd8
 // HW51 -- implementing bubblesort
-// 2022-01-04t
-// time spent:  hrs
+// 2022-01-04
+// time spent: 1 hr
 
 /******************************
  * class BubbleSort -- implements bubblesort algorithm (vanilla)
@@ -17,7 +17,6 @@
  * DISCO
  * We generally use size() instead of length() to refer to the no. of elements in an ArrayList
  * p - 1 < size() is different from p < size() -1
- *
  *
  * QCC
  * q0: If a pass requires no swaps, what do you know?
