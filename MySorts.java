@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-
 public class Sorts {
 
+//~~~~~~~~~~~~~~~~~~~ HELPER METHODS BEGIN ~~~~~~~~~~~~~~~~~~~
 // swapping
 public void swap(ArrayList<Comparable> data, int i, int j){ // i and j are indexes
   Comparable tempStorage = data.get(i);
@@ -137,7 +137,5 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
       int[] counters = {compareCounter, swapCounter, passCounter};
       return counters;
     }
-
-
 
 }
