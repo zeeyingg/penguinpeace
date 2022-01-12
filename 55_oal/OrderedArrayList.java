@@ -182,10 +182,7 @@ public class OrderedArrayList
     for( int i = 0; i < 15; i++ )
       franz.addBinary( (int)( 50 * Math.random() ) );
     System.out.println( franz );
-
-    /*-----v-------move-me-down-----------------v--------
-      =====^====================================^=========*/
-
   }//end main()
+
 
 }//end class OrderedArrayList
