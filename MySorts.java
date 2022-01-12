@@ -1,12 +1,6 @@
-//Ziying Jian
-//APCS
-//HW54 -- One File To Bring Them All...
-//2022-01-11
-//time spent: little
-
 import java.util.ArrayList;
 
-public class Sorts {
+public class MySorts {
 
 //~~~~~~~~~~~~~~~~~~~ HELPER METHODS BEGIN ~~~~~~~~~~~~~~~~~~~
 // swapping
@@ -42,7 +36,7 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
 }
 //~~~~~~~~~~~~~~~~~~~ HELPER METHODS END ~~~~~~~~~~~~~~~~~~~
 
-  public int[] insertionSortV(ArrayList<Comparable> data){
+  public void insertionSortV(ArrayList<Comparable> data){
     int passCounter = 0;
     int compareCounter = 0;
     int swapCounter = 0;
@@ -61,11 +55,11 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
     //  System.out.println(data); //diag
     }
    int[] counters = {compareCounter, swapCounter, passCounter};
-   return counters;
+   //return counters;
 }
 
 
-  public int[] selectionSortV( ArrayList<Comparable> data )
+  public void selectionSortV( ArrayList<Comparable> data )
   {
      // position of the greatest value
     //note: this version places greatest value at "rightmost" end
@@ -99,11 +93,11 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
 
     }
     int[] counters = {compareCounter, swapCounter, passCounter};
-    return counters;
+    //return counters;
   }//end selectionSort
 
 
-  public int[] bubbleSortV( ArrayList<Comparable> data )
+  public void bubbleSortV( ArrayList<Comparable> data )
     {
     int passCounter = 0;
     int compareCounter = 0;
@@ -135,13 +129,13 @@ public int[] walkElement(ArrayList<Comparable> data, int index) {
 
           //System.out.println("Passes so far: "+passCounter);
           int[] counters = {compareCounter, swapCounter, passCounter};
-          return counters;
+          //return counters;
         }
 
         //System.out.println("Passes so far: "+passCounter);
       } // end first loop
       int[] counters = {compareCounter, swapCounter, passCounter};
-      return counters;
+      //return counters;
     }
 
 }
