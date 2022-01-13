@@ -49,8 +49,14 @@ public class Magpie2
 			response = "Tell me more about your pets";
 		} else if(statement.indexOf("Mr. Mykolyk")>=0){
 			response = "Mykolyk sensei is a very good teacher";
-		} else if()
-		else
+		} else if(statement.indexOf("weather")>=0){
+			response = "I heard it's sunny and warm with a slight chance of rain today.";
+		} else if(statement.indexOf("ice cream")>=0){
+			response = "Ice cream is delicious. My favorite is strawberry.";
+		} else if(statement.indexOf("yes")>=0){
+			response = "That's what I like to hear";
+		}
+			else 
 		{
 			response = getRandomResponse();
 		}
@@ -85,10 +91,19 @@ public class Magpie2
 			response = "You don't say.";
 		} else if (whichResponse == 4)
 		{
-			response = "Huh"
+			response = "Huh";
 		}  else if (whichResponse == 5){
-			response = "How intriguing..."
+			response = "How intriguing...";
 		}
 	return response;
 	}
 }
+
+/*
+How to prioritize responses in the reply method?
+
+We can prioritize responses in the reply method by changing the order of the elseif
+statements in getResponse() so that the most prioritized keywords that should be searched for
+should come first.
+
+*/
