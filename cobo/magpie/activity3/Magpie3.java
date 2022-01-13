@@ -72,7 +72,12 @@ public class Magpie3
 	 // =====================TRACES===========
 	 /*
 	 0. psn = 0, before = " ", after = ""
-	 1. psn =
+	 1. psn = 0, before = "", after = " "
+	 2. psn = 9, before = " ", after = "t"
+	 		psn = 20, before = " ", after = ""
+	 3. psn = 3, before = "k", after = "w"
+	 		psn = 7, before = " ", after = "t"
+			psn = 22, before = "s", after = "w"
 	 */
 	private int findKeyword(String statement, String goal,
 			int startPos)
