@@ -1,10 +1,10 @@
 /**
  * A program to carry on conversations with a human user.
- * This version: 
+ * This version:
  * <ul><li>
- *    Uses advanced search for keywords 
- * </li></ul> 
- *    
+ *    Uses advanced search for keywords
+ * </li></ul>
+ *
  * @author Laurie White
  * @version April 2012
  */
@@ -12,7 +12,7 @@ public class Magpie3
 {
 	/**
 	 * Get a default greeting
-	 * 
+	 *
 	 * @return a greeting
 	 */
 	public String getGreeting()
@@ -22,7 +22,7 @@ public class Magpie3
 
 	/**
 	 * Gives a response to a user statement
-	 * 
+	 *
 	 * @param statement
 	 *            the user statement
 	 * @return a response based on the rules given
@@ -67,6 +67,17 @@ public class Magpie3
 	 *            search at
 	 * @return the index of the first occurrence of goal in
 	 *         statement or -1 if it's not found
+	 */
+
+	 // =====================TRACES===========
+	 /*
+	 0. psn = 0, before = " ", after = ""
+	 1. psn = 0, before = "", after = " "
+	 2. psn = 9, before = " ", after = "t"
+	 		psn = 20, before = " ", after = ""
+	 3. psn = 3, before = "k", after = "w"
+	 		psn = 7, before = " ", after = "t"
+			psn = 22, before = "s", after = "w"
 	 */
 	private int findKeyword(String statement, String goal,
 			int startPos)
@@ -122,7 +133,7 @@ public class Magpie3
 	 * is not a substring of a longer string (so, for
 	 * example, "I know" does not contain "no"). The search
 	 * begins at the beginning of the string.
-	 * 
+	 *
 	 * @param statement
 	 *            the string to search
 	 * @param goal
@@ -137,7 +148,7 @@ public class Magpie3
 
 	/**
 	 * Pick a default response to use if nothing else fits.
-	 * 
+	 *
 	 * @return a non-committal string
 	 */
 	private String getRandomResponse()

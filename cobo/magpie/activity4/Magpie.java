@@ -49,7 +49,7 @@ public class Magpie4
 		}
 
 		// Responses which require transformations
-		else if (statement.indexOf("I want ") >= 0) // because this would generally
+		else if (findKeyword(statement, "I want to", 0) >= 0)
 		{
 			response = transformIWantToStatement(statement);
 		}
@@ -90,9 +90,9 @@ public class Magpie4
 			statement = statement.substring(0, statement
 					.length() - 1);
 		}
-		int psn = findKeyword (statement, "I want", 0);
-		String restOfStatement = statement.substring(psn + 8).trim();
-		return "Would you really be happy if you had " + restOfStatement + "?";
+		int psn = findKeyword (statement, "I want to", 0);
+		String restOfStatement = statement.substring(psn + 9).trim();
+		return "What would it mean to " + restOfStatement + "?";
 	}
 
 
@@ -119,7 +119,7 @@ public class Magpie4
 		int psnOfMe = findKeyword (statement, "me", psnOfYou + 3);
 
 		String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe).trim();
-		return "Why do you " + restOfStatement + " you?";
+		return "What makes you think that I " + restOfStatement + " you?";
 	}
 
 
