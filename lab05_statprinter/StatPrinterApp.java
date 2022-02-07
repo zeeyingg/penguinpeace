@@ -1,7 +1,7 @@
-// Clyde "Thluffy" Sinclair
+// Radical Craticals
 // APCS pd08
 // L05 -- pulling it together
-// 2022-02-03r
+// 2022-02-03
 // time spent: 3 hrs
 
 /***
