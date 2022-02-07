@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Radical Craticals
+// APCS pd08
 // L05 -- pulling it together
-// 2022-02-03r
-// time spent:  hrs
+// 2022-02-03
+// time spent: 3 hrs
 
 
 /**
@@ -55,7 +55,14 @@ import java.util.ArrayList;
 public class StatPrinter
 {
   // instance variable for frequencies of each integer in input ArrayList
-  private ArrayList <Integer> _frequency;
+  private ArrayList <Integer> _frequency; // What does this line do?
+
+  public StatPrinter(){
+    _frequency = new ArrayList <Integer> (11);
+    for (int _freqsize = 0; _freqsize < 11; _freqsize++){
+      _frequency.add(0);
+    }
+  }
 
   //*************** QUESTION 02 **************************
   //precond:  data.size() > 0, each entry b/t 0,100 inclusive
@@ -65,18 +72,28 @@ public class StatPrinter
   //  _frequency would be [0,0,3,2,0,1]
   public StatPrinter( ArrayList <Integer> data )
   {
-    System.out.println(_frequency.size());
-    for (int j = 0; j < data.size(); j++){
-      int counter = 0;
-      for (int i = 0; i < _frequency.size(); i++){
-        if (data.get(i) == j){
-          counter++;
-        }
-        i = 0;
-        _frequency.add(counter);
+    //new array and populates it
+     _frequency = new ArrayList <Integer> (max(data) + 1);
+     for (int _freqsize = 0; _freqsize < max(data) + 1; _freqsize++){
+       _frequency.add(0);
+     }
+
+    for (Integer j = 0; j < data.size(); j++){
+      int value = _frequency.get(data.get(j));
+      _frequency.set(value, value ++);
     }
-  }
-  }
+
+    for (Integer index = 0; index < _frequency.size() ; index ++) {
+      int counter = 0;
+      for (int dataInd = 0; dataInd <= data.size() - 1; dataInd ++){
+        if(index == data.get(dataInd)){
+          counter ++;
+        }
+      }
+      _frequency.set(index, counter);
+    }
+
+} // end method
 
 
   //*************** QUESTION 01 **************************
@@ -103,32 +120,58 @@ public class StatPrinter
   // //    isLocalMode(0) -> false
   // //    isLocalMode(1) -> true
   // //    isLocalMode(5) -> true
-  // public boolean isLocalMode( int i )
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
+
+  public boolean isLocalMode( int i )
+  {
+  if (i > 0 && i < _frequency.size() - 1) {
+    return (_frequency.get( i - 1 ) < _frequency.get( i )) && (_frequency.get( i  ) > _frequency.get( i + 1 ));
+  }
+    return false;
+  }//end method
 
 
   // //*************** QUESTION 04 **************************
   // //postcond: returns list of modes in _frequency
-  // public ArrayList<Integer> getLocalModes()
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  //
-  // }
-  //
-  //
-  // //*************** QUESTION 05 **************************
-  // //precond:  longestBar > 0
-  // public void printHistogram( int longestBar )
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
+  public ArrayList<Integer> getLocalModes()
+  {
+    ArrayList <Integer> _localModes = new ArrayList <Integer>();
+
+    for (int index = 0; index < _frequency.size(); index ++){
+      if (isLocalMode(index) == true){
+        _localModes.add(_frequency.get(index));
+      }
+    }
+
+    return _localModes;
+
+  }
+
+
+  //*************** QUESTION 05 **************************
+  //precond:  longestBar > 0
+
+  public void printHistogram( int longestBar )
+  {
+    String s = "";
+    double scale = longestBar / (double) max(_frequency);
+
+    if (longestBar > 0){
+      for (int ind = 0; ind < _frequency.size(); ind ++) {
+        s += ind;
+        s += " : ";
+        for (int j = 0; j < _frequency.get(ind) * scale; j ++){
+          s += "*";
+        }
+        s += "\n";
+      }
+    }
+    System.out.println(s);
+  }
 
   public String toString(){
 		String foo = "[";
-		for( Integer i = 0; i < _frequency.size(); i++ ) {
-			foo += _frequency.get(i) + ",";
+		for( Integer z = 0; z < _frequency.size(); z++ ) {
+			foo += _frequency.get(z) + ",";
 		}
 		if ( foo.length() > 1 )
 			//shave off trailing comma
@@ -137,9 +180,5 @@ public class StatPrinter
 		return foo;
 	}
 
-  // public static void main(String[] args){
-  //   ArrayList test = new ArrayList();
-  //   System.out.println(test.size());
-  // }
 
 }//end class StatPrinter
