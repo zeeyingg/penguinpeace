@@ -8,9 +8,7 @@ DISCO:
 - Merge sort is a much easier sort than the others we have learned so far
 
 QCC:
-- How does this algorithim sort anything?
 - What additional parts of the firmware are we missing that sorts the deck?
-- How does merge sort play a role in this?
 
 THINKER FIRMWARE:
 0. Be given a deck
