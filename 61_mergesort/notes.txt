@@ -1,0 +1,13 @@
+kawaii coyotes | Faiza Huda, Ziying Jian, Truthful Tom, Inky
+APCS pd 8
+HW 61-- Instructions so Simple...
+time spent: 0.5 hr
+
+DISCOS
+ - In order for our merge sort to work, it has to actually be sorted (as seen in main method)
+ - Relearned arrays
+   - Manual copies
+   - We can't remove
+
+QCC
+ - What was mess for?
