@@ -162,4 +162,30 @@ public class Review {
       return randomNegativeAdj();
     }
   }
+
+public static double totalSentiment (String fileName){
+//  String temp = textToString(fileName);
+  double val = 0.0;
+  String word = removePunctuation(fileName);
+  
+  for (int i = 0; i < fileName.length(); i++){
+        int j = word.indexOf(SPACE, i);
+        word = fileName.substring(i, j);
+        val += sentimentVal(word);
+        i = j;
+        if ( word.indexOf(SPACE) == -1){
+          word = fileName.substring(i);
+          val += sentimentVal(word);
+        } 
+} return val;
+}
+
+public static void main(String [] args) {
+    System.out.println(sentimentVal("backward"));
+    System.out.println(sentimentVal("terrible"));
+    System.out.println(sentimentVal("wonderful"));
+    String bob = "backward terrible wonderful";
+	System.out.println(totalSentiment(bob));
+  }
+
 }
