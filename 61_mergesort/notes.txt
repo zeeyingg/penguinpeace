@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Radical Caticals: Ziying Jian, Daniel Jung, Anjini Katari
 HW60 -- A Termite is-a Turtle, a Thinker is-a Turtle
 2022-02-07
@@ -18,3 +19,18 @@ THINKER FIRMWARE:
 4. Once you receive one card, return that card to the thinker who gave it to you.
 
 
+=======
+kawaii coyotes | Faiza Huda, Ziying Jian, Truthful Tom, Inky
+APCS pd 8
+HW 61-- Instructions so Simple...
+time spent: 0.5 hr
+
+DISCOS
+ - In order for our merge sort to work, it has to actually be sorted (as seen in main method)
+ - Relearned arrays
+   - Manual copies
+   - We can't remove
+
+QCC
+ - What was mess for?
+>>>>>>> cc634aad475001fadcba8ed8b58b3b53bfd2330f
