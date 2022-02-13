@@ -24,3 +24,28 @@ Activity 1:
 
   c. Statement would not compile because there are two parameters in the method
     call, not one. Therfore, the method wont be correctly called.
+
+4) totalSentiment takes the input of the new file, and so as long as there is
+  input, sentimentVal is run on each word. The results are stored in value, and
+  a try-catch loops ensures that FileNotFoundExceptions will be caught. The value
+  is returned at the end of the loop.
+
+5) a. Yes, the rating makes sense. For every 5 point increase, the star rating is
+  increased.
+
+  b. To adjust the totalSentiment method, we could count the number of
+    words there are and scale the required rating by the number of
+    words. That way, we can accurately adjust the starRating so that the method
+    accounts for the length of the review and scales stars accordingly. Large
+    reviews won't be given 5 stars, but will be evaluated with their size in
+    context.
+
+6)
+
+  The order of the student's code prevents a range from being specified.
+  The student incorrectly assumed that all if-statements would be checked
+    at once. Instead, because if-statements are evaluated in descending order,
+    the code will check if totalSentiment is less than 15 first. That would cause
+    ratings all less than 15 to be given a 4, even if they're less than 10, 5, or 0.
+    This prevents the later statements from evaluating anything. To fix this,
+    the student would simply flip the order of the conditions and return statements.
