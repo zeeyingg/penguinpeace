@@ -193,12 +193,22 @@ public static int starRating (String fileName){
   return rating;
 }
 
+public static String fakeReview(String fileName){
+  String review = textToString(fileName);
+
+  for (int i = 0; i < review.length(); i++){
+    
+  }
+
+  }
+
 public static void main(String [] args) {
-    System.out.println(sentimentVal("backward"));
-    System.out.println(sentimentVal("terrible"));
-    System.out.println(sentimentVal("wonderful"));
-	  System.out.println(totalSentiment("SimpleReview.txt"));
-    System.out.println(starRating("SimpleReview.txt"));
+    // System.out.println(sentimentVal("backward"));
+    // System.out.println(sentimentVal("terrible"));
+    // System.out.println(sentimentVal("wonderful"));
+	  // System.out.println(totalSentiment("SimpleReview.txt"));
+    // System.out.println(starRating("SimpleReview.txt"));
+    System.out.println(fakeReview)
   }
 
 }
