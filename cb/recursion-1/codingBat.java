@@ -1,4 +1,4 @@
-public class Factorial {
+public class codingBat {
 
 /* Given n of 1 or more, return the factorial of n, which is n * (n-1) * (n-2)
 ... 1. Compute the result recursively (without loops). */
@@ -51,7 +51,7 @@ public static int bunnyEars2(int bunnies){
 }
 
 /* We have triangle made of blocks. The topmost row has 1 block, the next row
-down has 2 blocks, the next row has 3 blocks, and so on. Compute recursively 
+down has 2 blocks, the next row has 3 blocks, and so on. Compute recursively
 (no loops or multiplication) the total number of blocks in such a triangle with
 the given number of rows. */
 public static int triangle(int rows){
@@ -62,6 +62,17 @@ public static int triangle(int rows){
   }
 }
 
+/*Given a non-negative int n, return the sum of its digits recursively (no loops).
+Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/)
+by 10 removes the rightmost digit (126 / 10 is 12).
+*/
+public static int sumDigits(int n){
+  if (n %10 == 0){
+    return n;
+  } else{
+    return n%10 + sumDigits(n/10);
+  }
+}
 
 public static void main(String[] args) {
 
@@ -83,7 +94,11 @@ public static void main(String[] args) {
 
   System.out.println(triangle(0) + "...should be 0");
   System.out.println(triangle(1) + "...should be 1");
-  System.out.println(triangle(3) + "...should be 3");
+  System.out.println(triangle(2) + "...should be 3");
+
+  System.out.println(sumDigits(126) + "...should be 9");
+  System.out.println(sumDigits(49) + "...should be 13");
+  System.out.println(sumDigits(3) + "...should be 3");
 }
 
 }
