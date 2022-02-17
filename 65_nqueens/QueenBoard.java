@@ -11,7 +11,7 @@ public class QueenBoard
 
   private int[][] _board;
 
-  public QueenBoard( int size ) 
+  public QueenBoard( int size )
   {
     _board = new int[size][size];
   }
@@ -19,32 +19,40 @@ public class QueenBoard
 
   /***
    * precondition: board is filled with 0's only.
-   * postcondition: 
-   * If a solution is found, board shows position of N queens, 
+   * postcondition:
+   * If a solution is found, board shows position of N queens,
    * returns true.
-   * If no solution, board is filled with 0's, 
+   * If no solution, board is filled with 0's,
    * returns false.
    */
   public boolean solve()
   {
-    return false;
+
   }
 
 
   /**
-   *Helper method for solve. 
+   *Helper method for solve.
    */
-  private boolean solveH( int col ) 
+  private boolean solveH( int col )
   {
-    return false;
+    if (){ // base case
+
+    }
+    addQueen();
   }
 
 
+  /** Print board, a la toString...
+      Except:
+      all negs and 0's replaced with underscore
+      all 1's replaced with 'Q'
+  */
   public void printSolution()
   {
       String s = "";
-      for (int i = 0; i < _board[size]; i ++){ //rows
-        for (int j = 0; j < _board[size][size]; j ++){
+      for (int i = 0; i < _board.length; i ++){ //rows
+        for (int j = 0; j < _board[0].length; j ++){
             if (_board[i][j] <= 0){
                 s += "_" + "\t";
             }
@@ -55,11 +63,6 @@ public class QueenBoard
         s += "\n";
       }
       System.out.println(s);
-    /** Print board, a la toString...
-        Except:
-        all negs and 0's replaced with underscore
-        all 1's replaced with 'Q'
-    */
   }
 
 
@@ -68,8 +71,8 @@ public class QueenBoard
 
   /***
    * <General description>
-   * precondition: 
-   * postcondition: 
+   * precondition:
+   * postcondition:
    */
   private boolean addQueen(int row, int col)
   {
@@ -94,8 +97,8 @@ public class QueenBoard
 
   /***
    * <General description>
-   * precondition: 
-   * postcondition: 
+   * precondition:
+   * postcondition:
    */
   private boolean removeQueen(int row, int col){
     if ( _board[row][col] != 1 ) {
@@ -120,8 +123,8 @@ public class QueenBoard
 
   /***
    * <General description>
-   * precondition: 
-   * postcondition: 
+   * precondition:
+   * postcondition:
    */
   public String  toString()
   {
@@ -141,39 +144,36 @@ public class QueenBoard
   {
     QueenBoard b = new QueenBoard(5);
 
-    printSolution();
-
     System.out.println(b);
     /** should be...
-       0	0	0	0	0	
-       0	0	0	0	0	
-       0	0	0	0	0	
-       0	0	0	0	0	
-       0	0	0	0	0	
+       0	0	0	0	0
+       0	0	0	0	0
+       0	0	0	0	0
+       0	0	0	0	0
+       0	0	0	0	0
     */
 
     b.addQueen(3,0);
     b.addQueen(0,1);
     System.out.println(b);
     /** should be...
-       0	1	-1	-2	-1	
-       0	0	-2	0	0	
-       0	-1	0	-1	0	
-       1	-1	-1	-1	-2	
-       0	-1	0	0	0	
+       0	1	-1	-2	-1
+       0	0	-2	0	0
+       0	-1	0	-1	0
+       1	-1	-1	-1	-2
+       0	-1	0	0	0
     */
 
     b.removeQueen(3,0);
     System.out.println(b);
     /** should be...
-       0	1	-1	-1	-1	
-       0	0	-1	0	0	
-       0	0	0	-1	0	
-       0	0	0	0	-1	
-       0	0	0	0	0	 
+       0	1	-1	-1	-1
+       0	0	-1	0	0
+       0	0	0	-1	0
+       0	0	0	0	-1
+       0	0	0	0	0
     */
-    
+
   }
 
 }//end class
-
