@@ -73,10 +73,10 @@ public class KnightTour
     TourFinder tf = new TourFinder( n );
 
     //clear screen using ANSI control code
-    System.out.println( "[2J" );
+//    System.out.println( "[2J" );
 
     //display board
-    System.out.println( tf );
+  //  System.out.println( tf );
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //for fixed starting location, use line below:
@@ -188,7 +188,7 @@ class TourFinder
     //primary base case: tour completed
     if (  moves == (_sideLength * _sideLength) + 1) {
       _solved = true;
-      System.out.println( this ); //refresh screen
+     // System.out.println( this ); //refresh screen
       return;
     }
     //other base case: stepped off board or onto visited cell
@@ -202,7 +202,7 @@ class TourFinder
       //mark current cell with current move number
       _board[x][y] = moves;
 
-      System.out.println( this ); //refresh screen
+      // System.out.println( this ); //refresh screen
 
       //delay(1000); //uncomment to slow down enough to view
 
@@ -229,7 +229,7 @@ class TourFinder
       // (Overwrite number at this cell with a 0.)
         _board[x][y] = 0;
 
-      System.out.println( this ); //refresh screen
+    //  System.out.println( this ); //refresh screen
     }
   }//end findTour()
 
