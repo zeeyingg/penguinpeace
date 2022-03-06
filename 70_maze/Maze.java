@@ -1,8 +1,8 @@
-// Clyde Sinclair
-// APCS pd0
-// HW69 -- maze solving (blind, depth-first)
-// 2022-03-03r
-// time spent:  hrs
+// double johns; Ziying Jian, John Gupta-she, Rin Fukouka
+// APCS pd8
+// HW70 -- Thinkers of the Corn
+// 2022-03-05
+// time spent: .6 hrs
 
 /***
  * SKEELTON for
@@ -14,12 +14,22 @@
  * $ java Maze [path/to/mazefile]
  * (mazefile is ASCII representation of a maze, using symbols below)
  *
+ *
  * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
+ * The algorithm first checks if the hero is on one of the sides. If so, the method is exited.
+ * Otherwise, if the current hero is at the exit, the maze is solved. Otherwise, if the hero
+ * cannot find a path, then exit the method. Otherwise, check the top, bottom, left, and right
+ * for a possible path. Turn all paths into visited paths.
  *
  * DISCO
+ * return exits the method
+ * [2J clears the screen
+ * protection needs to be changed depending on if they're used between classes
+ * a legend can be super helpful! and can really help simplify things
  *
  * QCC
+ * How exactly does System.out.print(this) work?
+ * 
  *
  ***/
 
@@ -152,7 +162,6 @@ class MazeSolver
       for (int i = 0; i < 4; i++) {
         solve(x + xOffset[i], y + yOffset[i]);
       }
-
       System.out.println( this ); //refresh screen
       _maze[x][y] = VISITED_PATH;
       System.out.println( this ); //refresh screen
