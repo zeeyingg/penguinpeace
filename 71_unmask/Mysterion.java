@@ -1,4 +1,4 @@
-// Radical Caticals
+// Radical Caticals -- Ziying Jian, Daniel Jung, Anjini Kateri
 // APCS pd08
 // HW71 -- Reading for intent, tracing for VICTORY
 // 2022-03-07
