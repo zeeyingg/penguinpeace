@@ -1,21 +1,39 @@
-//Clyde Sinclair
-//APCS pd0
-//HW72 -- QuickSort
-//2022-03-09w
-//time spent: _h
+/*
+Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+APCS pd08
+HW73 - QuickSort Implementation
+2022-03-09w
+time spent : 1 hrs
+*/
+
+/**
+DISCO
+- The choosing of pivots affect the run time by a lot. If we choose the worst pivot everytime, we could end up with a run time of n^2.
+- If we choose the best pivot everytime, we could end up with a runtime of nlogn, which is faster than n^2.
+QCC
+- Choosing what index for a pivot is better than choosing the median index of the list as pivot?
+**/
 
 /***
  * class QuickSort
  * Implements quicksort algo to sort an array of ints in place
  *
  * 1. Summary of QuickSort algorithm:
- * QSort(arr):
+ * QSort(arr): calls quickSortHelper with lo being 0 and hi being arr.length - 1
+ * quickSortHelper calls on itself recursively and splits the list into halves each time and runs partition on each halve until the arrays are of length 2.
+ * That is when we know all the elements in that array is sorted
+ *
  *
  * 2a. Worst pivot choice and associated run time:
+ * Worst choice is when we choose the extreme pivot each time.
+ * runtime would be n^2 because we would have to run partition about n times since we chose the extreme each time.
  *
  * 2b. Best pivot choice and associated run time:
+ * Best choice would be choosing the median of the list.
+ * runtime would be nlog n because we only run partition around log n times.
  *
  * 3. Approach to handling duplicate values in array:
+ * You could  move elements both --equal-- and less than the pivot to the left.
  *
  **/
 
@@ -61,27 +79,37 @@ public class QuickSort
   //--------------^  HELPER METHODS  ^--------------
 
 
-
-
   /**
    * void qsort(int[])
    * @param d -- array of ints to be sorted in place
    */
   public static void qsort( int[] d )
   {
-
+    qSortHelper(d, 0, d.length - 1); // allows us to use parameters
   }
 
-  //you may need a helper method...
 
+  public static void qSortHelper(int[] d, int loPos, int hiPos) {
+    if (loPos < hiPos){
 
-  
+      int pivotIdx = Partition.partition(d, loPos, hiPos); // returns index of newly sorted pivot
+
+      if (hiPos - loPos == 1) { // if length of the subarray we are looking at is equal to two, we return, it means that array is sorted
+        return;
+      }
+      else {
+        qSortHelper(d, loPos, pivotIdx - 1); // run partition recursively on left side of initial pivot
+        qSortHelper(d, pivotIdx + 1, hiPos); // run partition recursively on right side of initial pivot
+      }
+
+    }
+  }
 
 
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y) 
+
 
     //get-it-up-and-running, static test case:
     int [] arr1 = {7,1,5,12,3};
@@ -107,6 +135,7 @@ public class QuickSort
     qsort( arrN );
     System.out.println("arrN after sort: " );
     printArr(arrN);
+        /*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
