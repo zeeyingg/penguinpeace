@@ -12,6 +12,7 @@ DISCO
 - If we choose the best pivot everytime, we could end up with a runtime of nlogn, which is faster than n^2.
 QCC
 - Choosing what index for a pivot is better than choosing the median index of the list as pivot?
+- How do we optimize our pivot positions? Which one is most efficient?
 **/
 
 /***
@@ -135,11 +136,9 @@ public class QuickSort
     qsort( arrN );
     System.out.println("arrN after sort: " );
     printArr(arrN);
-        /*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y)
+    /*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-
-    /*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y)
 
     //get-it-up-and-running, static test case w/ dupes:
     int [] arr2 = {7,1,5,12,3,7};
@@ -166,6 +165,7 @@ public class QuickSort
     qsort( arrMatey );
     System.out.println("arrMatey after sort: " );
     printArr(arrMatey);
+    /*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
   }//end main
