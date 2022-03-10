@@ -91,7 +91,7 @@ public class Partition
    swap( pvtPos, hiPos, arr);
    int s = loPos;
 
-   for( int i = loPos; i <= hiPos; i++ ) {
+   for( int i = loPos; i < hiPos; i++ ) {
      if ( arr[i] <= v) {
        swap( i, s, arr );
        s++;}
