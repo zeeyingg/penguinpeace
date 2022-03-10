@@ -1,8 +1,10 @@
-// Clyde Sinclair
-// APCS pd0
-// HW71 -- Reading for intent, tracing for VICTORY
-// 2022-03-07m
-// time spent:  hrs
+/*
+Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+APCS pd08
+HW73 - QuickSort Implementation
+2022-03-09w
+time spent : 1 hrs
+*/
 
 /***
  * class Parition (née Mysterion)
