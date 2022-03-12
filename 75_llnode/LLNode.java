@@ -70,9 +70,9 @@ public class LLNode
   //return length of list
   public int size(){
       int size = 1; 
-      LLNode current = this;
+      LLNode currentList = this;
       while (this.next != null){
-          current = this.next;
+          currentList = this.next;
           size++;
       }
       return size;
