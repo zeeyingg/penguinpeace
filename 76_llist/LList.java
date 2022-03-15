@@ -1,3 +1,18 @@
+/*
+Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+APCS pd08
+HW76 - implementing LList
+2022-03-14m
+time spent : 0.8 hrs
+*/
+
+/*
+DISCO
+- We should check if the list already has an element while adding elements to the linked list. 
+QCC
+- How should we print the linked list?
+*/
+
 /***
  * class LList
  * Implements a linked list of LLNodes, each containing String data
@@ -11,9 +26,10 @@ public class LList implements List //interface def must be in this dir
   private int _size;
 
   // constructor -- initializes instance vars
-  public LList( )
+  public LList()
   {
-    // YOUR CODE HERE
+    _head = new LLNode(null, null);
+    _size = size();
   }
 
 
@@ -21,7 +37,22 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
-    // YOUR CODE HERE
+    LLNode temp = _head;
+
+    // If we dont have a cargo yet
+    if (temp.getCargo() == null){
+      temp.setCargo(newVal);
+    }
+    
+    // If we already have a cargo
+    else{
+      for (int i = 1; i < size(); i++){
+        temp = temp.getNext();
+      }
+      temp.setNext(new LLNode(newVal, null));
+    }
+
+    return true;
   }
 
 
@@ -29,8 +60,17 @@ public class LList implements List //interface def must be in this dir
   {
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
+ 
+    // Create alias so we don't lose data
+    LLNode temp = _head;
+    
+    // Traverse through Linked list
+    for (int i = 0; i < index; i++){
+      temp = temp.getNext();
+    }
 
-    // YOUR CODE HERE
+    // Return the Cargo
+    return temp.getCargo();
   }
 
 
@@ -40,14 +80,32 @@ public class LList implements List //interface def must be in this dir
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    // YOUR CODE HERE
+    // Create alias so we don't lose data
+    LLNode temp = _head;
+
+    // Traverse through Linked List
+    for (int i = 0; i < index; i++){
+      temp = temp.getNext();
+    }
+
+    // Sets cargo to newVal
+    return temp.setCargo(newVal);
   }
 
 
   //return number of nodes in list
   public int size()
   {
-    // YOUR CODE HERE
+    int i = 0;
+    LLNode temp = _head;
+    if( _head.getCargo() != null ) {
+        i ++;
+        while (temp.getNext() != null) {
+            temp = temp.getNext();
+            i++; 
+        }
+    }
+    return i; 
   }
 
   //--------------^  List interface methods  ^--------------
@@ -57,14 +115,19 @@ public class LList implements List //interface def must be in this dir
   // override inherited toString
   public String toString()
   {
-    // YOUR CODE HERE
+    String ans = "";
+    LLNode temp = _head;
+    for (int i = 0; i < size() && _head != null; i++){ 
+      ans = temp.getCargo() + " " + ans;
+      temp = temp.getNext();
+    }
+    return ans;
   }
 
 
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     LList james = new LList();
 
     System.out.println( james );
@@ -92,6 +155,7 @@ public class LList implements List //interface def must be in this dir
     System.out.println( "...and now 2nd item is: " + james.set(1,"got") );
 
     System.out.println( james );
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }
 
