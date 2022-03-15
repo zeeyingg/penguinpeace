@@ -28,8 +28,8 @@ public class LList implements List //interface def must be in this dir
   // constructor -- initializes instance vars
   public LList()
   {
-    _head = new LLNode(null, null);
-    _size = size();
+    _head = null;
+    _size = 0;
   }
 
 
@@ -37,22 +37,10 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
-    LLNode temp = _head;
-
-    // If we dont have a cargo yet
-    if (temp.getCargo() == null){
-      temp.setCargo(newVal);
-    }
-
-    // If we already have a cargo
-    else{
-      for (int i = 1; i < size(); i++){
-        temp = temp.getNext();
-      }
-      temp.setNext(new LLNode(newVal, null));
-    }
-
-    return true;
+      LLNode tmp = new LLNode( newVal, _head );
+      _head = tmp;
+      _size++;
+      return true;
   }
 
 
@@ -88,24 +76,27 @@ public class LList implements List //interface def must be in this dir
       temp = temp.getNext();
     }
 
+    String oldVal = temp.getCargo();
+    temp.setCargo(newVal);
+
     // Sets cargo to newVal
-    return temp.setCargo(newVal);
+    return oldVal;
   }
 
 
   //return number of nodes in list
   public int size()
   {
-    int i = 0;
-    LLNode temp = _head;
-    if( _head.getCargo() != null ) {
-        i ++;
-        while (temp.getNext() != null) {
-            temp = temp.getNext();
-            i++;
-        }
-    }
-    return i;
+    // int i = 0;
+    // LLNode temp = _head;
+    // if( _head.getCargo() != null ) {
+    //     i ++;
+    //     while (temp.getNext() != null) {
+    //         temp = temp.getNext();
+    //         i++;
+    //     }
+    // }
+    return _size;
   }
 
   //--------------^  List interface methods  ^--------------
@@ -115,14 +106,24 @@ public class LList implements List //interface def must be in this dir
   // override inherited toString
   public String toString()
   {
-    String ans = "";
+    /* String ans = "";
     LLNode temp = _head;
-    for (int i = 0; i < size() && _head != null; i++){
+    for (int i = 0; i < _size; i++){
       ans = temp.getCargo() + " " + ans;
       temp = temp.getNext();
     }
-    ans = "( " + ans + ")";
-    return ans;
+    return ans; */
+
+
+    String retStr = "HEAD->";
+      LLNode tmp = _head; //init tr
+      while( tmp != null ) {
+  	    retStr += tmp.getCargo() + "->";
+  	    tmp = tmp.getNext();
+      }
+      retStr += "NULL";
+      return retStr;
+
   }
 
 
