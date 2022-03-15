@@ -1,3 +1,18 @@
+/*
+Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+APCS pd08
+HW75 - Nodal Recall
+2022-03-11f
+time spent : 0.8 hrs
+*/
+
+/*
+DISCO
+- We recursively contain a node in a node. 
+QCC
+- In what ways can we utilize linked lists so that it is more efficient than an array. 
+*/
+
 /***
  * class LLNode
  * Implements a node, for use in lists and other container classes.
@@ -8,13 +23,13 @@ public class LLNode implements List
 {
   //instance vars
   public String cargo;
-  public LLNode next;
+  public LLNode nextN;
 
   // constructor
-  public LLNode( String value, LLNode next )
+  public LLNode( String value, LLNode nextN )
   {
     this.cargo = value;
-    this.next = null;
+    this.nextN = null;
   }
 
 
@@ -26,7 +41,7 @@ public class LLNode implements List
 
   public LLNode getNext()
   {
-    return this.next;
+    return this.nextN;
   }
   //--------------^  ACCESSORS  ^--------------
 
@@ -34,12 +49,16 @@ public class LLNode implements List
   //--------------v  MUTATORS  v--------------
   public String setCargo( String newCargo )
   {
-    return this.cargo = newCargo;
+    String prev = getCargo();
+    this.cargo = newCargo; 
+    return prev; 
   }
 
   public LLNode setNext( LLNode newNext )
   {
-    return this.next = newNext;
+    LLNode prev = getNext();
+    this.nextN = newNext;
+    return prev; 
   }
   //--------------^  MUTATORS  ^--------------
 
@@ -48,24 +67,25 @@ public class LLNode implements List
   public String toString()
   {
     String s = "";
-    s = "(" + this.cargo + " " + this.next + ")";
+    s = "(" + this.cargo + " " + this.nextN + ")";
     return s;
   }
 
-//   //add node to list, containing input String as its data
-//   public boolean add( String x ){
-      /* IMPLEMENTATION */
-//   }
+/* 
+//add node to list, containing input String as its data
+   public boolean add( String x ){
+       // IMPLEMENTATION 
+   }
 
-//   //return data in element at position i
-//   public String get( int i ){
-       /* IMPLEMENTATION */
-//   }
+   //return data in element at position i
+   public String get( int i ){
+        // IMPLEMENTATION 
+   }
 
-//   //overwrite data in element at position i
-//   public String set( int i, String x ){
-      /* IMPLEMENTATION */
-//   }
+   //overwrite data in element at position i
+   public String set( int i, String x ){
+       //  IMPLEMENTATION 
+   }
 
   //return length of list
   public int size(){
@@ -77,6 +97,7 @@ public class LLNode implements List
       }
       return size;
   }
+*/
 
   public static void main(String[] args){
       
@@ -97,7 +118,7 @@ public class LLNode implements List
     //Create a third node after the second
     first.getNext().setNext( new LLNode( "cow", null ) );
     System.out.println( (first) + " ...should be (cat (dog (cow null)))" );
-    System.out.println( "The size of the list is: " + first.size() + "...should be 3");
+    //  System.out.println( "The size of the list is: " + first.size() + "...should be 3");
     
 
     // //A naive list traversal, has side effects.... ??
@@ -107,12 +128,21 @@ public class LLNode implements List
     //    }
 
     //Q: when head ptr moves to next node in list, what happens to the node it just left?
+    //A: Original node is no longer assigned as first. 
 
     //...so better: ?
+    String nextC = first.getCargo();
+    LLNode nextN = first.getNext();
+    System.out.println(nextC);
+    
+    while(nextN != null){
+      nextC = nextN.getCargo();
+      nextN = nextN.getNext();
+      System.out.println(nextC);
+    }
     //
     //
     //
   }//end main
 
 }//end class LLNode
-
