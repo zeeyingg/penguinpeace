@@ -9,14 +9,14 @@
 
 public interface List
 {
-  // //add node to list, containing input String as its data
-  // public boolean add( String x );
+  //add node to list, containing input String as its data
+  public boolean add( String x );
 
-  // //return data in element at position i
-  // public String get( int i );
+  //return data in element at position i
+  public String get( int i );
 
-  // //overwrite data in element at position i
-  // public String set( int i, String x );
+  //overwrite data in element at position i
+  public String set( int i, String x );
 
   //return length of list
   public int size();

@@ -4,7 +4,7 @@
  * Stores its data as a String
  **/
 
-public class LLNode
+public class LLNode implements List
 {
   //instance vars
   public String cargo;
