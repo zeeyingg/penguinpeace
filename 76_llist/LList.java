@@ -8,7 +8,7 @@ time spent : 0.8 hrs
 
 /*
 DISCO
-- We should check if the list already has an element while adding elements to the linked list. 
+- We should check if the list already has an element while adding elements to the linked list.
 QCC
 - How should we print the linked list?
 */
@@ -43,7 +43,7 @@ public class LList implements List //interface def must be in this dir
     if (temp.getCargo() == null){
       temp.setCargo(newVal);
     }
-    
+
     // If we already have a cargo
     else{
       for (int i = 1; i < size(); i++){
@@ -60,10 +60,10 @@ public class LList implements List //interface def must be in this dir
   {
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
- 
+
     // Create alias so we don't lose data
     LLNode temp = _head;
-    
+
     // Traverse through Linked list
     for (int i = 0; i < index; i++){
       temp = temp.getNext();
@@ -102,10 +102,10 @@ public class LList implements List //interface def must be in this dir
         i ++;
         while (temp.getNext() != null) {
             temp = temp.getNext();
-            i++; 
+            i++;
         }
     }
-    return i; 
+    return i;
   }
 
   //--------------^  List interface methods  ^--------------
@@ -117,10 +117,11 @@ public class LList implements List //interface def must be in this dir
   {
     String ans = "";
     LLNode temp = _head;
-    for (int i = 0; i < size() && _head != null; i++){ 
+    for (int i = 0; i < size() && _head != null; i++){
       ans = temp.getCargo() + " " + ans;
       temp = temp.getNext();
     }
+    ans = "( " + ans + ")";
     return ans;
   }
 
