@@ -1,33 +1,40 @@
 /*
 Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 APCS pd08
-HW77 - implementing remove-at-index and add-at-index functions to LList
+HW77 -- Insert|Remove
 2022-03-15t
-time spent : 0.8 hrs
+time spent : 1 hr
 */
 
 /*
-DISCO
-- We can make another LLNode that contains the part of the list that is modified and use setNext() the list back together. 
+DISCO:
+- We can make another LLNode that contains the part of the list that is modified
+and use setNext() the list back together.
+- Because we are using an alias to refer to the list, we don't need to account for
+stuff before the index we wanted to remove because that is maintained in the _head
+- In our remove() method, by switching the cargo from the removed value to the next value,
+rather than shifting the rest of the elements, we are removing the desired link and
+linking the previous node to the next node.
 
-QCC
-- Is it possible to achieve O(1) with the new ADD and REM algorithms? 
+QCC:
+- Is it possible to achieve O(1) with the new ADD and REM algorithms?
+- What are the advantages and disadvantages of LinkedLists when compared to ArrayLists?
 
-ALGO ADD
+ALGO ADD:
 - Create an alias for _head called tmp.
 - If we want to add to beginning of list, we can just use our old add().
 - Traverse to index that we want to add the newVal at in tmp.
 - Create an LLNODE called restOfList that contains the current Node of tmp + the rest of the tmp's nodes.
 - Set the current node to be newVal.
-- Lastly, set the next node of tmp to be restOfList. 
+- Lastly, set the next node of tmp to be restOfList.
 
-ALGO REM
+ALGO REM:
 - Create an alias for _head called tmp.
-- Traverse to the index of the node that we are trying to remove. 
+- Traverse to the index of the node that we are trying to remove.
 - Store that node.
-- Set current cargo to be the cargo of the next node
-- Set the next node of the current cargo to be the second node after the current cargo.
-- Return the node we removed. 
+- Replace current cargo with cargo of the next node
+- Replace everything else after the current cargo with everything else after the next cargo.
+- Return the node we removed.
 */
 
 
@@ -48,6 +55,7 @@ public class LList implements List //interface def must be in this dir
 
   //--------------v  List interface methods  v--------------
 
+  // Adds at a specific index
   public boolean add( String newVal )
   {
     LLNode tmp = new LLNode( newVal, _head );
@@ -63,14 +71,16 @@ public class LList implements List //interface def must be in this dir
     LLNode temp = _head;
 
     if (_size == 0){ // special case if _size = 0
-        add(newVal); 
+        add(newVal);
     }
 
     else {
       for (int i = 0; i < index; i++)
       {
-        temp = temp.getNext(); 
+        temp = temp.getNext();
       }
+
+      // Creates another node and subsequent nodes after that
       LLNode restOfList = new LLNode(temp.getCargo(),temp.getNext());
 
       temp.setCargo(newVal);
@@ -97,15 +107,11 @@ public class LList implements List //interface def must be in this dir
 
     //Set current cargo to be the cargo of the next node
     //Set the next node of the current cargo to be the second node after the current cargo
-    tmp.setCargo(tmp.getNext().getCargo());
-    tmp.setNext(tmp.getNext().getNext());
+    tmp.setCargo(tmp.getNext().getCargo()); // replaces the cargo of the current node from the cargo of the next node
+    tmp.setNext(tmp.getNext().getNext()); // replaces the rest of the current node with the rest of the next node
     _size--;
     return rV;
   }
-
-
-
-
 
 
   public String get( int index )
