@@ -79,7 +79,7 @@ public class ElevensBoard extends Board {
 	 *              contain an 11-pair; false otherwise.
 	 */
 	private boolean containsPairSum11(List<Integer> selectedCards) {
-		return (selectedCards.size() == 2) && (selectedCards.get(0) + selectedCards.get(1) == 11);
+		return (selectedCards.size() == 2) && (selectedCards.get(0).intValue() + selectedCards.get(1).intValue() == 11);
 	}
 
 	/**
@@ -91,6 +91,7 @@ public class ElevensBoard extends Board {
 	 *              include a jack, a queen, and a king; false otherwise.
 	 */
 	private boolean containsJQK(List<Integer> selectedCards) {
-		return (selectedCards.size() == 3) && (selectedCards.get(0) + selectedCards.get(1) + selectedCards.get(2) == 36);
+		return (selectedCards.size() == 3) && (selectedCards.get(0).intValue()
+		 + selectedCards.get(1).intValue() + selectedCards.get(2).intValue() == 0);
 	}
 }
