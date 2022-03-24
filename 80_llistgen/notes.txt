@@ -1,0 +1,15 @@
+Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+APCS pd08
+HW80 -- Generically Speaking
+2022-03-23w
+time spent : 0.8 hrs
+
+DISCO:
+* Whenever you want to change return type, you should start with the interface.
+* Cmd/Ctrl + F is your friend -- Cmd/Ctrl + F and Replace All is NOT.
+* When you are initializing your return type, that gets mapped over to the placeholder.
+* The placeholder can be anything, except a keyword or an imported type.
+
+QCC:
+* Why doesn't Java throw a symbol not found error when you are using a placeholder?
+* On a similar note, why don't you have to initialize the placeholder "T"?
