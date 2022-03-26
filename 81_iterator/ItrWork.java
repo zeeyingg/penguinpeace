@@ -22,6 +22,12 @@ type of ArrayList?
 * What are the advantages of using a Iterator versus a for-each loop? Disadvantages?
 * What is iterator()? Why isn't it listed on the subset?
 
+SUMMARY THE FIRST:
+
+
+SUMMARY THE SECOND:
+
+
 **/
 
 /***
@@ -111,9 +117,9 @@ public class ItrWork
 
 
     //var type: List   obj type: ?
-    List<Integer> L = new ArrayList<Integer>();
+    List L = new ArrayList();
 
-    for( int i = 0; i < 10; i++ ){
+    for( Integer i = 0; i < 10.0; i++ ){
       L.add(i);
     }
 

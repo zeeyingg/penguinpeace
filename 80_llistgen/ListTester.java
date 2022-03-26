@@ -12,48 +12,69 @@ public class ListTester
   {
 
     //instantiate... var type List, obj type LList
-    List<Integer> wu = new LList<Integer>();
+    List<Integer> moo = new LList<Integer>();
+
+    System.out.println(moo);
+    moo.add(1);
+
+    System.out.println(moo);
+    moo.add(2);
+
+    System.out.println(moo);
+    moo.add(3);
+
+    System.out.println(moo);
+    moo.add(4);
+
+    System.out.println(moo);
+
+    List<Character> boo = new LList<Character>();
+
+    System.out.println(boo);
+    boo.add('a');
+
+    System.out.println(boo);
+    boo.add('b');
+
+    System.out.println(boo);
+    boo.add('c');
+
+    System.out.println(boo);
+    boo.add('d');
+
+    System.out.println(boo);
+
+    List wu = new LList();
 
     System.out.println(wu);
-    wu.add(1);
+    wu.add('a');
 
     System.out.println(wu);
-    wu.add(2);
+    wu.add(999);
 
     System.out.println(wu);
-    wu.add(3);
+    wu.add(true);
 
     System.out.println(wu);
-    wu.add(4);
-
-    System.out.println(wu);
-    wu.add(5);
-
-    System.out.println(wu);
-    wu.add(6);
-
-    System.out.println(wu);
-    wu.add(7);
-
-    System.out.println(wu);
-    wu.add(8);
+    wu.add("STRING");
 
     System.out.println(wu);
 
-    for( int i=0; i<7; i++ ) {
-      int n = (int)( wu.size() * Math.random() );
-      Integer imposter = 999;
-      System.out.println("adding a poser at index " + n + "...");
-      wu.add( n, imposter );
-      System.out.println("Updated list: " + wu);
-    }
 
-    while( wu.size() > 0 ) {
-      int n = (int)( wu.size() * Math.random() );
-      System.out.println("deleting node "+ n + "...");
-      wu.remove(n);
-      System.out.println("Updated list: " + wu);
-    }
+    // for( int i=0; i<7; i++ ) {
+    //   int n = (int)( moo.size() * Math.random() );
+    //   Integer imposter = 999;
+    //   System.out.println("adding a poser at index " + n + "...");
+    //   moo.add( n, imposter );
+    //   System.out.println("Updated list: " + moo);
+    // }
+    //
+    // while( moo.size() > 0 ) {
+    //   int n = (int)( moo.size() * Math.random() );
+    //   System.out.println("deleting node "+ n + "...");
+    //   moo.remove(n);
+    //   System.out.println("Updated list: " + moo);
+    // }
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
