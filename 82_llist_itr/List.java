@@ -2,7 +2,7 @@
  * interface List
  * Specifies actions a List must be able to perform.
  * New in Version 6: Iterability via FOREACH
- *  (The Iterable interface is a superinterface to interface List, 
+ *  (The Iterable interface is a superinterface to interface List,
  *   in the actual Java library. Interface Iterable is what allows
  *   a for-each loop to be run over an instance of a collection class.)
  **/
