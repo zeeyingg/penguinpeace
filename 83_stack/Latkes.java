@@ -30,19 +30,34 @@ public class Latkes
   //means of insertion
   public void push( String s )
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
+    _stackSize++;
+    String[] _retArr = _stack;
+    int index = 1;
+  if (isFull() == false){
+    for (int i = 0; i < _stackSize-1; i++){
+      _retArr[index] = _stack[i];
+      index++;
+    }
+
+    _retArr[0] = s;
+  }
   }// O(?)
 
 
   //means of removal
   public String pop( )
   {
-    String[] _dummy = new String[_stackSize-1];
+    int index = 1;
+    String removedItem = _stack[0];
+    String[] _retArr = _stack;
+  if (!isEmpty()){
+    for (int i = 0; i <_stackSize+1; i++){
+      _retArr[i] = _stack[index];
+      index++;
+    }
+    _stackSize--;
+    return removedItem;
+  } return "NULL";
   }// O(?)
 
 
@@ -56,14 +71,14 @@ public class Latkes
   //chk for fullness
   public boolean isFull()
   {
-    return (_stackSize == initCapacity);
+    return (_stack[_stackSize] != null);
   }// O(?)
 
 
   //main method for testing
   public static void main( String[] args )
   {
-    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+
 
     Latkes tastyStack = new Latkes(10);
 
@@ -107,6 +122,7 @@ public class Latkes
 
     //stack empty by now; SOP(null)
     System.out.println( tastyStack.pop() );
+      /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
   }//end main()
