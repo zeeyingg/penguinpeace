@@ -22,13 +22,9 @@ public class Latkes
   //constructor
   public Latkes( int initCapacity )
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-  }// O(?)
+    String[] _stack = new String[initCapacity];
+    _stackSize = -1;
+  }// O(?) -- the first item in the stack would set size to 0
 
 
   //means of insertion
@@ -46,36 +42,21 @@ public class Latkes
   //means of removal
   public String pop( )
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
+    String[] _dummy = new String[_stackSize-1];
   }// O(?)
 
 
   //chk for emptiness
   public boolean isEmpty()
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
+    return (_stackSize == -1);
   }// O(?)
 
 
   //chk for fullness
   public boolean isFull()
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
+    return (_stackSize == initCapacity);
   }// O(?)
 
 
