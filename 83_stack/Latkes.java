@@ -6,9 +6,11 @@
  **/
 
 /***
-    DISCO
+    DISCO:
+    - pop and push run in constant time
 
-    QCC
+    QCC:
+    - How to read an arry full of 'null'?
 
  **/
 
@@ -17,70 +19,89 @@ public class Latkes
 {
   private String [] _stack;
   private int _stackSize;
-
+  private int maxSize;
 
   //constructor
   public Latkes( int initCapacity )
   {
-    String[] _stack = new String[initCapacity];
+    maxSize = initCapacity;
+     _stack = new String[maxSize];
     _stackSize = -1;
-  }// O(?) -- the first item in the stack would set size to 0
+  }// O(1) -- the first item in the stack would set size to 0
 
 
   //means of insertion
   public void push( String s )
   {
     _stackSize++;
-    String[] _retArr = _stack;
-    int index = 1;
-  if (isFull() == false){
-    for (int i = 0; i < _stackSize-1; i++){
-      _retArr[index] = _stack[i];
-      index++;
+    if (!isFull()){
+      for (int i = _stackSize-1; i > -1; i--){
+        _stack[i+1] = _stack[i]; // pushes all elements up
     }
 
-    _retArr[0] = s;
-  }
-  }// O(?)
+  } else if (isFull()){
+      String[] _retArr = new String[maxSize * 2];
+      copy(_retArr, _stack);
+      _stack = _retArr;
+      for (int i = _stackSize-1; i > -1; i--){
+        _stack[i+1] = _stack[i]; }
+    }
+    _stack[0] = s;
+    System.out.println(this); // diag print statemnent
+}// O(n) -- using a for loop
 
 
   //means of removal
   public String pop( )
   {
-    int index = 1;
+    // String[] _retArr = _stack;
     String removedItem = _stack[0];
-    String[] _retArr = _stack;
-  if (!isEmpty()){
-    for (int i = 0; i <_stackSize+1; i++){
-      _retArr[i] = _stack[index];
-      index++;
-    }
+    if (!isEmpty()) {
+      for (int i = 1; i <_stackSize + 1; i++){
+        _stack[i-1] = _stack[i];
+      }
+    _stack[_stackSize]= null;
     _stackSize--;
+    System.out.println(this);
     return removedItem;
-  } return "NULL";
-  }// O(?)
+  } return null;
+ }// O(?)
 
+  public String[] copy(String[] copier, String[] copyOff){
+    for (int i = 0; i < copyOff.length; i++){
+      copier[i] = copyOff[i];
+    } return copier;
+  }
 
   //chk for emptiness
   public boolean isEmpty()
   {
-    return (_stackSize == -1);
+    return (_stackSize == 0);
   }// O(?)
 
 
   //chk for fullness
   public boolean isFull()
   {
-    return (_stack[_stackSize] != null);
+    return (_stackSize == maxSize);
   }// O(?)
 
+
+  public String toString(){
+    String retVal = "{" + _stack[0];
+    for (int i = 1; i < _stack.length; i++){
+      retVal = retVal + "," +  _stack[i];
+    }
+    retVal = retVal + "}";
+    return retVal;
+  }
 
   //main method for testing
   public static void main( String[] args )
   {
 
-
     Latkes tastyStack = new Latkes(10);
+    // System.out.println( tastyStack.isFull() );
 
     tastyStack.push("aoo");
     tastyStack.push("boo");
