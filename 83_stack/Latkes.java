@@ -7,10 +7,15 @@
 
 /***
     DISCO:
-    - pop and push run in constant time
+    - Depending on where you add your element, pop() and push() have different run-time complexities
+    - For instance, if elements were added/removed to the right of the list, the algos would have run in constant time
+    - If elements were added/removed to the left of the list, pop() and push() would have a complexity of O(n)
+    - Adding a return type in an already initialized variable will leave you with many pains
 
     QCC:
-    - How to read an arry full of 'null'?
+    - What are abstract data types exactly?
+    - What should we actually do if more elements want to be pushed?
+    - Which is actually the most efficient direction to add elements?
 
  **/
 
@@ -25,7 +30,7 @@ public class Latkes
   public Latkes( int initCapacity )
   {
     maxSize = initCapacity;
-     _stack = new String[maxSize];
+    _stack = new String[maxSize];
     _stackSize = -1;
   }// O(1) -- the first item in the stack would set size to 0
 
@@ -56,8 +61,8 @@ public class Latkes
   {
     // String[] _retArr = _stack;
     String removedItem = _stack[0];
-    if (!isEmpty()) {
-      for (int i = 1; i <_stackSize + 1; i++){
+    if (!isEmpty()) { // array is populated
+      for (int i = 1; i <_stackSize + 1; i++){ 
         _stack[i-1] = _stack[i];
       }
     _stack[_stackSize]= null;
@@ -67,10 +72,10 @@ public class Latkes
   } return null;
  }// O(?)
 
-  public String[] copy(String[] copier, String[] copyOff){
-    for (int i = 0; i < copyOff.length; i++){
-      copier[i] = copyOff[i];
-    } return copier;
+  public String[] copy(String[] copyTo, String[] copyFrom){
+    for (int i = 0; i < copyFrom.length; i++){
+      copyTo[i] = copyFrom[i];
+    } return copyTo;
   }
 
   //chk for emptiness
