@@ -60,7 +60,7 @@ public class LatKtS
   {
     Latkes waffle = new Latkes(s.length());
 
-    String[] arr = s.split("");
+    String[] arr = s.split(""); // splits the array
 
     for (String str : arr) {
       if (arr[0].equals(")") || arr[0].equals("}") || arr[0].equals("]")) {
