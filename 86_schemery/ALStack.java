@@ -1,18 +1,15 @@
 // Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 // APCS pd08
-// HW85 -- Leon Leonwood Stack
-// 2022-03-31t
+// HW86 -- What a Racket // Scheme stuff
+// 2022-04-01f
 // time spent : 0.5 hrs
 
 /**
 DISCO:
-- Z needs to be changed to Comparable.
-- We do not need to keep track of size() as ArrayList and LinkedList do that for us already.
-- We can use the various methods built in the different types of Collections to implement stacks more easily.
+- We might need another stack to unload the operation in the parenthesis.
 
 QCC
-- Why does Z need to be changed to Comparable?
-- What other methods will we be implementing for stacks?
+- Why did we need to typecast the return of evaluate? Shouldn't the element popped from parenNum be a string?
 **/
 
 import java.util.ArrayList;
