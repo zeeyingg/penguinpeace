@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+=======
+// Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+// APCS pd08
+// HW88 -- BPC Kiddies Do Not Wait in Line Either
+// 2022-04-05t
+// time spent : 0.5 hrs
+
+/**
+DISCO:
+- We could use dequeue() in sample() to scramble to queue.
+- You don't need to re-connect two parts of an linkedlist together, simply need
+to shift the positions.
+
+QCC:
+- Why are we removing random elements from the queue?
+- What is the point of sample()?
+**/
+
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 /***
  * class RQueue
  * SKELETON
@@ -25,18 +45,43 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
   // default constructor creates an empty queue
   public RQueue()
   {
+<<<<<<< HEAD
+=======
+    _front = _end = null;
+    _size = 0;
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
   }
 
 
+<<<<<<< HEAD
   public void enqueue( T enQVal )
   {
 
   }//O(?)
+=======
+  public void enqueue( SWASHBUCKLE enQVal )
+  {
+
+    //special case: when enqueuing to an empty list,
+    //make _front && _end point to same node
+    if ( isEmpty() ) {
+      _front = _end = new LLNode<SWASHBUCKLE>( enQVal, null );
+    }
+    else {
+      _end.setNext( new LLNode<SWASHBUCKLE>( enQVal, null ) );
+      _end = _end.getNext();
+    }
+    _size++;
+    System.out.println("enqueued " + enQVal);
+
+  }//O(1)
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
 
   // remove and return thing at front of queue
   // assume _queue ! empty
+<<<<<<< HEAD
   public T dequeue()
   {
 
@@ -47,28 +92,94 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
   {
 
   }//O(?)
+=======
+  public SWASHBUCKLE dequeue()
+  {
+    SWASHBUCKLE ans;
+    if (_size == 1)
+    {
+      ans = _front.getCargo();
+      _front.setCargo(null);
+      _end.setCargo(null);
+      return ans;
+    } else
+    {
+      LLNode<SWASHBUCKLE> _tmp = _front;
+      int random = (int) ((Math.random() * _size) - 1);
+
+      for (int i = 0; i < random; i ++) {
+        _tmp = _tmp.getNext();
+      }
+      ans = _tmp.getNext().getCargo();
+      _tmp.setNext(_tmp.getNext().getNext());
+      _size --;
+      return ans;
+    }
+
+  }//O(n)
+
+
+  public SWASHBUCKLE peekFront()
+  {
+    return _front.getCargo();
+
+  }//O(1)
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
 
   /***
    * void sample() -- a means of "shuffling" the queue
    * Algo:
    *   < YOUR SUCCINCT SUMMARY HERE >
+<<<<<<< HEAD
    **/
   public void sample ()
   {
 
   }//O(?)
+=======
+   * If this list is not empty:
+   * For _size - 1 amount of times, we enqueue() into the queue an element that we dequeue() from the queue
+   **/
+  public void sample ()
+  {
+    if (!this.isEmpty()) {
+      for (int i = 0; i < _size; i++) {
+        this.enqueue(this.dequeue());
+      }
+    }
+
+    System.out.println(this.peekFront());
+
+
+  }//O(n^2)
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
 
   public boolean isEmpty()
   {
     return _front == null;
+<<<<<<< HEAD
   } //O(?)
+=======
+  } //O(1)
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
 
   // print each node, separated by spaces
   public String toString()
   {
+<<<<<<< HEAD
+=======
+    String ans = "FRONT -> ";
+    LLNode<SWASHBUCKLE> tmp = _front;
+    while( tmp != null ) {
+      ans += tmp.getCargo() + " ";
+      tmp = tmp.getNext();
+    }
+    ans += " -> END";
+    return ans;
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
   }//end toString()
 
@@ -78,11 +189,19 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
   public static void main( String[] args )
   {
 
+<<<<<<< HEAD
       /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
     
     Queue<String> PirateQueue = new RQueue<String>();
 
     System.out.println("\nnow enqueuing..."); 
+=======
+
+
+    Queue<String> PirateQueue = new RQueue<String>();
+
+    System.out.println("\nnow enqueuing...");
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
     PirateQueue.enqueue("Dread");
     PirateQueue.enqueue("Pirate");
     PirateQueue.enqueue("Roberts");
@@ -90,10 +209,17 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     PirateQueue.enqueue("Peter");
     PirateQueue.enqueue("Stuyvesant");
 
+<<<<<<< HEAD
     System.out.println("\nnow testing toString()..."); 
     System.out.println( PirateQueue ); //for testing toString()...
 
     System.out.println("\nnow dequeuing..."); 
+=======
+    System.out.println("\nnow testing toString()...");
+    System.out.println( PirateQueue ); //for testing toString()...
+
+    System.out.println("\nnow dequeuing...");
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
     System.out.println( PirateQueue.dequeue() );
     System.out.println( PirateQueue.dequeue() );
     System.out.println( PirateQueue.dequeue() );
@@ -102,8 +228,14 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     System.out.println( PirateQueue.dequeue() );
 
     System.out.println("\nnow dequeuing fr empty queue...\n" +
+<<<<<<< HEAD
                        "(expect NPE)\n"); 
     System.out.println( PirateQueue.dequeue() );
+=======
+                       "(expect NPE)\n");
+    System.out.println( PirateQueue.dequeue() );
+          /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+>>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
