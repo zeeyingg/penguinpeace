@@ -1,0 +1,18 @@
+Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+APCS pd08
+HW82 -- Roll Your Own Iterator
+2022-03-28m
+time spent : 0.5 hrs
+
+DISCO:
+* Iterator functionality can override FOREACH loop -- reminds me of toString.
+* When we return the MyIterator() in the iterator(), we had to set aside memory.
+* When using next() and remove(), we had to throw NoSuchElementException and IllegalStateException.
+
+QCC:
+* Previously when we've used the FOREACH loop, have we always been using the
+functionality of Iterator?
+* What are other examples of Iterables besides Collections?
+* Can Iterator be implemented to traverse both directions of a linked list?
+* Why not use a try-catch block?
+* How does the driver (V6Driver) test remove()?
