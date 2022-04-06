@@ -16,7 +16,7 @@ $ java -classpath .:path/tosinbad.jar Driver
 https://berry-cs.github.io/sinbad/install-java
 
 ### What encourages me?
-- My mother wanting to adopt TAQS and to throw me to the curb.
+- My sister torturing me so I'm motivated to run away to college ASAP
 
 ### Our Experience
 - This lab was pretty easy to understand and get the hang of. Learning how to run the class path command was unfunny and required a learning curve. Overall, it's one of the more useful labs I've done and I'm satisfied with how we were able to learn to extract data.
