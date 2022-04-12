@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 // APCS pd08
 // HW88 -- BPC Kiddies Do Not Wait in Line Either
@@ -17,7 +15,6 @@ QCC:
 - What is the point of sample()?
 **/
 
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 /***
  * class RQueue
  * SKELETON
@@ -45,21 +42,12 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
   // default constructor creates an empty queue
   public RQueue()
   {
-<<<<<<< HEAD
-=======
     _front = _end = null;
     _size = 0;
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
   }
 
 
-<<<<<<< HEAD
-  public void enqueue( T enQVal )
-  {
-
-  }//O(?)
-=======
   public void enqueue( SWASHBUCKLE enQVal )
   {
 
@@ -76,23 +64,10 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     System.out.println("enqueued " + enQVal);
 
   }//O(1)
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
 
   // remove and return thing at front of queue
   // assume _queue ! empty
-<<<<<<< HEAD
-  public T dequeue()
-  {
-
-  }//O(?)
-
-
-  public T peekFront()
-  {
-
-  }//O(?)
-=======
   public SWASHBUCKLE dequeue()
   {
     SWASHBUCKLE ans;
@@ -124,20 +99,12 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     return _front.getCargo();
 
   }//O(1)
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
 
   /***
    * void sample() -- a means of "shuffling" the queue
    * Algo:
    *   < YOUR SUCCINCT SUMMARY HERE >
-<<<<<<< HEAD
-   **/
-  public void sample ()
-  {
-
-  }//O(?)
-=======
    * If this list is not empty:
    * For _size - 1 amount of times, we enqueue() into the queue an element that we dequeue() from the queue
    **/
@@ -153,24 +120,17 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
 
 
   }//O(n^2)
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
 
   public boolean isEmpty()
   {
     return _front == null;
-<<<<<<< HEAD
-  } //O(?)
-=======
   } //O(1)
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
 
   // print each node, separated by spaces
   public String toString()
   {
-<<<<<<< HEAD
-=======
     String ans = "FRONT -> ";
     LLNode<SWASHBUCKLE> tmp = _front;
     while( tmp != null ) {
@@ -179,7 +139,6 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     }
     ans += " -> END";
     return ans;
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
 
   }//end toString()
 
@@ -189,19 +148,9 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
   public static void main( String[] args )
   {
 
-<<<<<<< HEAD
-      /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
-    
-    Queue<String> PirateQueue = new RQueue<String>();
-
-    System.out.println("\nnow enqueuing..."); 
-=======
-
-
     Queue<String> PirateQueue = new RQueue<String>();
 
     System.out.println("\nnow enqueuing...");
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
     PirateQueue.enqueue("Dread");
     PirateQueue.enqueue("Pirate");
     PirateQueue.enqueue("Roberts");
@@ -209,17 +158,10 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     PirateQueue.enqueue("Peter");
     PirateQueue.enqueue("Stuyvesant");
 
-<<<<<<< HEAD
-    System.out.println("\nnow testing toString()..."); 
-    System.out.println( PirateQueue ); //for testing toString()...
-
-    System.out.println("\nnow dequeuing..."); 
-=======
     System.out.println("\nnow testing toString()...");
     System.out.println( PirateQueue ); //for testing toString()...
 
     System.out.println("\nnow dequeuing...");
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
     System.out.println( PirateQueue.dequeue() );
     System.out.println( PirateQueue.dequeue() );
     System.out.println( PirateQueue.dequeue() );
@@ -228,16 +170,10 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     System.out.println( PirateQueue.dequeue() );
 
     System.out.println("\nnow dequeuing fr empty queue...\n" +
-<<<<<<< HEAD
-                       "(expect NPE)\n"); 
-    System.out.println( PirateQueue.dequeue() );
-=======
                        "(expect NPE)\n");
     System.out.println( PirateQueue.dequeue() );
-          /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
->>>>>>> 52c3eb6087a6446b67473fbc3b8677568fda282d
-
-      ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
+    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+    /~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
   }//end main
 
