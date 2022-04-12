@@ -31,4 +31,8 @@ public class LLQueue<QUASAR> implements Queue<QUASAR>{
   }
   //~~~~~~~~~~~~~~~~~~~end AP subset~~~~~~~~~~~~~~~~~~~
 
+  public String toString(){
+      return _arr.toString();
+  }
+
 }
