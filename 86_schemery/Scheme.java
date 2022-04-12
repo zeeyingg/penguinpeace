@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
 // APCS pd08
 // HW86 -- What a Racket // Scheme stuff
@@ -14,20 +12,11 @@ QCC
 - Why did we need to typecast the return of evaluate? Shouldn't the element popped from parenNum be a string?
 **/
 
->>>>>>> 5eec64d357040c21a0f66a0e46f137264a1bbfbb
 /***
  * class Scheme
  * Simulates a rudimentary Scheme interpreter
  *
  * ALGORITHM for EVALUATING A SCHEME EXPRESSION:
-<<<<<<< HEAD
- *   1. Steal underpants.
- *   2. ...
- *   5. Profit!
- *
- * STACK OF CHOICE: ____ by ____
- * b/c ...
-=======
  *   1. Convert the String into a list of Strings.
  *   2. Have a for loop that keeps running until we iterate through the entire list. 
  *   3. In each repetition of the for loop : 
@@ -41,7 +30,6 @@ QCC
  * STACK OF CHOICE: ALStack by Mister George
  * b/c 
  * we chose it by random. 
->>>>>>> 5eec64d357040c21a0f66a0e46f137264a1bbfbb
  **/
 
 public class Scheme
@@ -57,8 +45,6 @@ public class Scheme
    **/
   public static String evaluate( String expr )
   {
-<<<<<<< HEAD
-=======
     ALStack parenNums = new ALStack();
     ALStack operators = new ALStack();
 
@@ -110,7 +96,6 @@ public class Scheme
     }
 
     return "" + parenNums.pop();
->>>>>>> 5eec64d357040c21a0f66a0e46f137264a1bbfbb
 
   }//end evaluate()
 
@@ -121,10 +106,6 @@ public class Scheme
    *           Returns the result of operating on sequence of operands.
    *           Ops: + is 1, - is 2, * is 3
    **/
-<<<<<<< HEAD
-  public static String unload( int op, Stack<String> numbers )
-  {
-=======
   public static String unload( int op, ALStack<String> numbers )
   {
         int temp = Integer.parseInt(numbers.peekTop());
@@ -157,25 +138,10 @@ public class Scheme
         }
 
         return "" + temp; 
->>>>>>> 5eec64d357040c21a0f66a0e46f137264a1bbfbb
 
   }//end unload()
 
 
-<<<<<<< HEAD
-  /*
-  //optional check-to-see-if-its-a-number helper fxn:
-  public static boolean isNumber( String s ) {
-  try {
-  Integer.parseInt(s);
-  return true;
-  }
-  catch( NumberFormatException e ) {
-  return false;
-  }
-  }
-  */
-=======
 
   public static boolean isNumber( String s ) {
     try {
@@ -187,18 +153,12 @@ public class Scheme
     }
   }
 
->>>>>>> 5eec64d357040c21a0f66a0e46f137264a1bbfbb
 
 
   //main method for testing
   public static void main( String[] args )
   {
 
-<<<<<<< HEAD
-    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
-=======
-
->>>>>>> 5eec64d357040c21a0f66a0e46f137264a1bbfbb
       String zoo1 = "( + 4 3 )";
       System.out.println(zoo1);
       System.out.println("zoo1 eval'd: " + evaluate(zoo1) );
@@ -218,10 +178,7 @@ public class Scheme
       System.out.println(zoo4);
       System.out.println("zoo4 eval'd: " + evaluate(zoo4) );
       //...-4
-<<<<<<< HEAD
-=======
-                /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
->>>>>>> 5eec64d357040c21a0f66a0e46f137264a1bbfbb
+      /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
   }//main()
 
