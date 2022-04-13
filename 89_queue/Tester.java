@@ -1,3 +1,22 @@
+/*
+Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+APCS pd08
+HW89 - Queue Two Ways
+2022-03-111f
+time spent : 0.8 hrs
+*/
+
+/*
+DISCO
+- ALQueue wraps ArrayList
+- LLQueue wraps LinkedList
+- You don't need a _size variable -- List already has them
+
+QCC
+- Are these methods extended from List?
+
+*/
+
  public class Tester{
     
  public static void main( String[] args )
