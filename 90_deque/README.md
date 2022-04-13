@@ -4,16 +4,16 @@ Mister George, Ziying, Diana, Weichen
 
 - ~Read through all the Oracle documentation and understand functionality~
 - ~Complete Deque interface with all methods commented out except the one that is currently being implemeneted~
-- ~With the Oracle documentation in mind and the interface, start coding in this order:~
+- ~With the Oracle documentation in mind and the interface, start coding in this order below:~
+- ~Test functionality using a driver file, named Tester.java~
 
 ##### **METHODS IMPLEMENTED:**
-* `peekFirst()`
+* `peekFirst()` 
 * `peekLast()`
 * `addFirst(e)`
 * `addLast(e)`
 * `removeFirst()`
 * `removeLast()`
-- Test functionality in a driver file with test cases, called Tester.java
 
 ##### **METHODS NOT YET IMPLEMENTED:**
 * `offerFirst(e)` 
