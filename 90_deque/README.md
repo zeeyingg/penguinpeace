@@ -16,7 +16,7 @@ Mister George, Ziying, Diana, Weichen
 - Test functionality in a driver file with test cases, called Tester.java
 
 ##### **METHODS NOT YET IMPLEMENTED:**
-* offerFirst(e) 
-* pollFirst() 
-* offerLast(e) 
-* pollLast() 
+* `offerFirst(e)` 
+* `pollFirst()`
+* `offerLast(e)`
+* `pollLast()`
