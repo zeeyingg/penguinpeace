@@ -6,8 +6,7 @@ Mister George, Ziying, Diana, Weichen
 - Complete Deque interface with all methods commented out except the one that is currently being implemeneted
 - With the Oracle documentation in mind and the interface, start coding
 
-</br>
-ACCESSORS:
+##### **ACCESSORS:**
 * peekFirst() - implemented
 * peekLast() - implemented
 * addFirst(e) - implemented
