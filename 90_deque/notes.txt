@@ -1,0 +1,16 @@
+// Mister George :: Diana Akhmedova, Ziying Jian, Weichen Liu
+// APCS pd08
+// HW90 -- Swabbing the Deque
+// 2022-04-12
+// time spent : 0.5 hrs
+
+DISCO:
+- offer() - inserts the element in the first position unless it violates capacity restrictions
+- poll() - retrives and removes the first element at the first position; returns null if deck is empty
+- these two methods basically do the same thing as add() and remove(), just with more safety checks
+- addLast() == add()
+
+QCC:
+- Why can't LL be converted to QQKachoo? We keep getting this error even though we 
+initialized the LL the same way in our previous homework.
+- How do we throw other exceptions? 
