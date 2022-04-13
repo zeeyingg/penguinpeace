@@ -5,7 +5,7 @@ public class Tester{
 
     public static void main(String[] args){
 
-        QQKachoo<String> bob = new LinkedList<String>(); // issues with this line
+        ListDeque<String> bob = new LinkedList<String>(); // issues with this line
 
         System.out.println("Should throw an IndexOutOfBoundsException...");
         bob.addFirst("Pamcake");
