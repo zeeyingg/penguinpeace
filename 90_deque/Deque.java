@@ -1,3 +1,5 @@
+// Mister George, Ziying, Diana, Weichen
+
 public interface Deque<Card>{
 
 public void addFirst(Card e);

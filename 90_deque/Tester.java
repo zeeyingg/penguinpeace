@@ -1,3 +1,5 @@
+// Mister George, Ziying, Diana, Weichen
+
 import java.util.*;
 import java.lang.*;
 
@@ -5,13 +7,13 @@ public class Tester{
 
     public static void main(String[] args){
 
-        ListDeque<String> bob = new LinkedList<String>(); // issues with this line
+        ListDeque<String> bob = new ListDeque<String>(); // issues with this line
 
-        System.out.println("Should throw an IndexOutOfBoundsException...");
-        bob.addFirst("Pamcake");
+        // System.out.println("Should throw an IndexOutOfBoundsException...");
+        // bob.addFirst("Pamcake");
 
         for (int i = 0; i < 6; i++){
-         bob.addFirst("null");   
+         bob.addFirst("");   
         }
 
         System.out.println(bob);

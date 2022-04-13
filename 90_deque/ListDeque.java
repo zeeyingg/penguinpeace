@@ -1,19 +1,21 @@
+// Mister George, Ziying, Diana, Weichen
+
 import java.util.*;
 import java.lang.*;
 
 public class ListDeque<Card> implements Deque<Card>{
 
-private LinkedList<Card> _arr;
+private ArrayList<Card> _arr;
 
 public ListDeque(){
-    _arr = new LinkedList<Card>();
+    _arr = new ArrayList<Card>();
 }
 
 public void addFirst(Card e){
     if (e == null){
         throw new NullPointerException();
     }
-    _arr.add(_arr.size()-1, e);
+    _arr.add(0, e);
 }
 
 public void addLast(Card e){
