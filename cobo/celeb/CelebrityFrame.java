@@ -79,8 +79,7 @@ public class CelebrityFrame extends JFrame
 	{
 		if (screen.equals("GAME")){
 			gamePanel.addClue(controller.sendClue());
-	}
+		}	
 	((CardLayout)panelCards.getLayout()).show(panelCards, screen);
-	
-}
+	}
 }

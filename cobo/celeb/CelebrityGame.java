@@ -40,9 +40,6 @@ public class CelebrityGame
 	public void prepareGame()
 	{
 		celebGameList = new ArrayList<Celebrity>();
-		celebGameList.add(new Celebrity("Eddie Redmayne", "Stars in Fantastic Beasts"));
-		celebGameList.add(new Celebrity("Daniel Radcliff", "Stars in Harry Potter"));
-		celebGameList.add(new Celebrity("Emma Watson", "The star heroine of Harry Potter"));
 		gameWindow.replaceScreen("START");
 	}
 
