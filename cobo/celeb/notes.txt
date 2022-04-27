@@ -36,7 +36,21 @@ Activity 3:
 1. JFrame - the background of the window - allows you to change its size and border and menu bar  
 2. private ArrayList<Celebrity> celebGameList;
 3. no, because you need to show the celebrity in the GUI
+12. CelebrityGame()
+13. Knows about the Celebrity object
+
+Activity 4
+17. Using the parameter @Overriden 
+18. Using accessor methods. 
+19. extends 
+20. Gryphon()
 
 DISCO:
+* GUI is incredibly annoying to work and deal with
+* Inheritance can be really useful in streamlining information between classes
+* It's good practice to use super() when writing overloaded constructors 
 
 QCC:
+* What is SWING? 
+* Uhmm, so why doesn't CelebrityRunner run a GUI?
+* Did anyone actually get the game to display?
