@@ -1,7 +1,11 @@
 Team Eddie's Fanclub - Andrey Sokolov + Geese & Ziying Jian + Pinky
+
 APCS pd8 
+
 L09 - Some Folks Call It A Charades 
+
 2022-04-26 
+
 time spent: 2 hrs
 
 ### TO DO:
