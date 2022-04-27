@@ -1,3 +1,9 @@
+// Team Eddie's Fanclub - Andrey Sokolov + Geese & Ziying Jian + Pinky
+// APCS pd8
+// L09 - Some Folks Call It A Charades
+// 2022-04-26
+// time spent: all of csdojo
+
 import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
