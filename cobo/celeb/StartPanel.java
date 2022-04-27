@@ -1,9 +1,3 @@
-// Team Eddie's Fanclub - Andrey Sokolov + Geese & Ziying Jian + Pinky
-// APCS pd8
-// L09 - Some Folks Call It A Charades
-// 2022-04-26
-// time spent: all of csdojo
-
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -108,8 +102,7 @@ public class StartPanel extends JPanel
    * The current number of celebrities added to the game
    */
   private int celebrityCount;
-  private JRadioButton disneyActresses;
-  private String nameOfCelebrity;
+  
   
   /**
    * Constructs a StartPanel with a reference to the game passed as a
@@ -121,8 +114,6 @@ public class StartPanel extends JPanel
   public StartPanel(CelebrityGame controller)
   {
     super();
-    disneyActresses = new JRadioButton("Your Celebrity Type");
-    nameOfCelebrity = "Your celebrity type clue format hint";
     this.controller = controller;
     this.panelLayout = new SpringLayout();
     this.typeGroup = new ButtonGroup();
@@ -185,8 +176,7 @@ public class StartPanel extends JPanel
    */
   private void setupPanel()
   {
-    this.add(disneyActresses);
-    disneyActresses.add(disneyActresses);
+    // Adds the RadioButtons to the group so only one can be selected.
   }
   
   /**
@@ -208,9 +198,8 @@ public class StartPanel extends JPanel
     panelLayout.putConstraint(SpringLayout.EAST, celebrityCountLabel, -45, SpringLayout.EAST, this);
     
     //Put your custom radio button info here
-    panelLayout.putConstraint(SpringLayout.WEST, disneyActresses, 0, SpringLayout.WEST, celebrityRadio);
-    panelLayout.putConstraint(SpringLayout.NORTH, disneyActresses, 10, SpringLayout.SOUTH, celebrityRadio);
-    panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 10, SpringLayout.SOUTH, disneyActresses);
+    
+    panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 10, SpringLayout.SOUTH, celebrityRadio);
     panelLayout.putConstraint(SpringLayout.WEST, literatureRadio, 0, SpringLayout.WEST, celebrityRadio);
     
     panelLayout.putConstraint(SpringLayout.NORTH, clueLabel, 10, SpringLayout.SOUTH, answerField);
@@ -270,7 +259,6 @@ public class StartPanel extends JPanel
     literatureRadio.addActionListener(select -> clueLabel.setText(literatureClue));
     celebrityRadio.addActionListener(select -> clueLabel.setText(celebrityClue));
     
-    disneyActresses.addActionListener(select -> clueLabel.setText(celebrityClue));
   }
   
   private void invalidInput()
@@ -287,9 +275,6 @@ public class StartPanel extends JPanel
     if (literatureRadio.isSelected())
     {
       type = "Literature";
-    } 
-    else if (disneyActresses.isSelected()){
-      type = "Disney";
     }
     String answer = answerField.getText().trim();
     String clue = clueField.getText().trim();
