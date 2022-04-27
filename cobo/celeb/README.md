@@ -9,9 +9,9 @@ L09 - Some Folks Call It A Charades
 time spent: 2 hrs
 
 ### TO DO:
-* ~~Look through the pdf, and answer questions along the way
+* ~~Look through the pdf, and answer questions along the way~~
 * ~~Create the CelebrityGame using the provided skeletons (by filling in the missing code) -- first Celebrity.java, then CelebrityGame.java,
-then CelebrityRunner.java
+then CelebrityRunner.java~~
 * Create a functional GUI using CelebrityFrame.java and CelebrityPanel.java
 
 #Team Eddie's Fanclub
