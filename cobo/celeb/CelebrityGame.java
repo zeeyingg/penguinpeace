@@ -31,6 +31,7 @@ public class CelebrityGame
 	 */
 	public CelebrityGame()
 	{
+		celebGameList = new ArrayList<Celebrity>();
 		gameWindow = new CelebrityFrame(this);
 	}
 
@@ -40,9 +41,6 @@ public class CelebrityGame
 	public void prepareGame()
 	{
 		celebGameList = new ArrayList<Celebrity>();
-		celebGameList.add(new Celebrity("Eddie Redmayne", "Stars in Fantastic Beasts"));
-		celebGameList.add(new Celebrity("Daniel Radcliff", "Stars in Harry Potter"));
-		celebGameList.add(new Celebrity("Emma Watson", "The star heroine of Harry Potter"));
 		gameWindow.replaceScreen("START");
 	}
 
@@ -62,6 +60,8 @@ public class CelebrityGame
 			celebGameList.remove(0);
 			if (celebGameList.size()>0){
 				gameCelebrity = celebGameList.get(0);
+			} else {
+				gameCelebrity = new Celebrity("", "");
 			}
 		}
 		return matches;
@@ -109,8 +109,7 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-		String celebGuess = name.trim();
-		return celebGuess.length() >= 4;
+		return name.trim().length() >= 4;
 	}
 
 	/**
@@ -167,6 +166,6 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		return gameCelebrity.getAnswer();
 	}
 }

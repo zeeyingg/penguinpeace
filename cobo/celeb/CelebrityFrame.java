@@ -66,7 +66,7 @@ public class CelebrityFrame extends JFrame
 		this.setTitle("Celebrity Game");
 		this.add(panelCards);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setResizable(false);
+//		this.setResizable(false);
 		replaceScreen("START");
 		this.setVisible(true);
 	}
@@ -79,8 +79,7 @@ public class CelebrityFrame extends JFrame
 	{
 		if (screen.equals("GAME")){
 			gamePanel.addClue(controller.sendClue());
-	}
+		}	
 	((CardLayout)panelCards.getLayout()).show(panelCards, screen);
-	
-}
+	}
 }

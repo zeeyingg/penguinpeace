@@ -123,7 +123,7 @@ public class StartPanel extends JPanel
     this.literatureClue = "Enter the clues for the literature celeb separated by commas";
     this.clueLabel = new JLabel(celebrityClue);
     
-    this.answerField = new JTextField("Type celebrity here (4 letters minimum thx Cher)");
+    this.answerField = new JTextField("Type celebrity here (4 letters minimum)");
     this.clueField = new JTextField("Enter celebrity clue here (10 letters minimum)");
     this.addCelebrityButton = new JButton("Add current celebrity");
     this.startButton = new JButton("Start Celebrity game");
@@ -176,9 +176,23 @@ public class StartPanel extends JPanel
    */
   private void setupPanel()
   {
-    // Adds the RadioButtons to the group so only one can be selected.
+		this.setLayout(panelLayout);
+		this.add(clueLabel);
+		this.add(celebrityRadio);
+		this.add(literatureRadio);
+		this.add(answerField);
+		this.add(clueField);
+		this.add(startButton);
+		this.add(celebrityCountLabel);
+		this.add(addCelebrityButton);
+
+		// Adds the RadioButtons to the group so only one can be selected.
+		celebrityRadio.setSelected(true);
+		startButton.setEnabled(false);
+		typeGroup.add(celebrityRadio);
+		typeGroup.add(literatureRadio);
   }
-  
+
   /**
    * Uses the Springlayout constraint system to place all GUI components on
    * screen. All constraints grouped together to keep code clean and

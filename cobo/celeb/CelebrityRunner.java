@@ -18,6 +18,5 @@ public class CelebrityRunner
 	public static void main(String [] args)
 	{
 		CelebrityGame newGame = new CelebrityGame();
-		// newGame.setVisible(true);
 	}
 }
