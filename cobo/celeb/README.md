@@ -12,6 +12,6 @@ time spent: 2 hrs
 * ~~Look through the pdf, and answer questions along the way~~
 * ~~Create the CelebrityGame using the provided skeletons (by filling in the missing code) -- first Celebrity.java, then CelebrityGame.java,
 then CelebrityRunner.java~~
-* Create a functional GUI using CelebrityFrame.java and CelebrityPanel.java
+* ~~Create a functional GUI using CelebrityFrame.java and CelebrityPanel.java~~
 
 #Team Eddie's Fanclub
