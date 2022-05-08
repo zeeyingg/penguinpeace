@@ -1,0 +1,112 @@
+Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
+APCS pd08
+HW94 -- reverse engineering
+2022-05-08f
+time spent: 1 hrs
+
+
+DISCO
+------------------------------------------------
+* stuymunc was a massive success!!
+* each two order combination has its own algo for solving
+* the easiest way to construct a tree is using the in-order traversal and
+either the pre-order or post-order algo
+================================================
+
+
+QCC
+------------------------------------------------
+* How do you know where to start with the pre- and post-order algo?
+* How can we take what we learned about creating recursive trees using turtles and python?
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: Uno
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: Uno
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: Uno
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: 2^N-1 (N being the number of nodes given). This is the counting principle and
+we subtract 1 from that because the root is not included.
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: The first node of the traversal is the root
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: The last node of the traversal is the root
+
+Q: What does "1-to-1" mean?
+A: The data of two elements are exactly the same
+
+Q: What does "onto" mean?
+A: To a location
+
+================================================
+
+ALGO for pre-order
+------------------------------------------------
+givens:
+Node with left and right
+
+procedure without recursion:
+1. Initialize a queue
+2. Process the root first
+3. Then, process the individual subtrees (left first, right second)
+4. To process means to enqueue the value into the queue
+5. Print out the queue
+
+procedure with recursion:
+1. Initialize root node if it has a value
+2. Process the root node
+3. Call method for left subtree
+4. The method works by processing nodes until the node does not have a value
+5. Call method for right subtree
+
+ALGO for in-order
+------------------------------------------------
+givens:
+Node with left and right
+
+procedure without recursion:
+1. Initialize a deque
+2. Process the left subtree
+3. Then, process the root
+4. Then, process the right subtree
+5. To process means to enque the left subtree, add the root, and push the right subtree
+6. Print out the deque
+
+procedure with recursion:
+1. Initialize root node with a value or null
+2. Call method for left subtree
+3. The method works by processing nodes until the node does not have a value
+5. Process the root node
+4. Call method for right subtree
+
+
+ALGO for post-order
+------------------------------------------------
+givens:
+Node with left and right
+
+procedure without recursion:
+1. Initialize a stack
+2. Process the individual subtrees (left first, right second)
+3. Then, process the root
+4. To process means to push the value into the stack
+5. Print out the stack
+
+procedure with recursion:
+1. Initialize root node with a value or null
+2. Call method for left subtree
+4. Call method for right subtree
+3. The method works by processing nodes until the node does not have a value
+5. Process the root node
+
+================================================
