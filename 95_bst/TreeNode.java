@@ -18,9 +18,10 @@ public class TreeNode
    * Construct a tree node with specified value,
    * with null left and right subtrees.
    */
-  TreeNode( int initValue )
+  public TreeNode( int initValue )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    _cargo = initValue;
+    _lt = _rt = null;
   }
 
 
@@ -28,16 +29,18 @@ public class TreeNode
    * overloaded constructor
    * Construct tree node w specified value, left, and right subtrees.
    */
-  TreeNode( int initValue, TreeNode initLeft, TreeNode initRight )
+  public TreeNode( int initValue, TreeNode initLeft, TreeNode initRight )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    _cargo = initValue;
+    _lt = initLeft;
+    _rt = initRight;
   }
 
 
   /**
    * Returns the left subtree of this node.
    */
-  TreeNode getLeft()
+  public void TreeNode getLeft()
   {
     /*** YOUR IMPLEMENTATION HERE ***/
   }
