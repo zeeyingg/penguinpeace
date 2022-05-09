@@ -40,54 +40,54 @@ public class TreeNode
   /**
    * Returns the left subtree of this node.
    */
-  public void TreeNode getLeft()
+  public TreeNode getLeft()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    return this._lt;
   }
 
 
   /**
    * Returns the right subtree of this node.
    */
-  TreeNode getRight()
+  public TreeNode getRight()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    return this._rt;
   }
 
 
   /**
    * Returns the value stored in this tree node.
    */
-  int getValue()
+  public int getValue()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    return this._cargo;
   }
 
 
   /**
    * Sets the value of the left subtree of this node.
    */
-  void setLeft( TreeNode theNewLeft )
+  public void setLeft( TreeNode theNewLeft )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    this._lt = theNewLeft;
   }
 
 
   /**
    * Sets the value of the right subtree of this node.
    */
-  void setRight( TreeNode theNewRight )
+  public void setRight( TreeNode theNewRight )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    this._rt = theNewRight;
   }
 
 
   /**
    * Sets the value of this tree node.
    */
-  void setValue( int theNewValue ) 
+  public void setValue( int theNewValue ) 
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    this._cargo = theNewValue;
   }
 
 }//end class

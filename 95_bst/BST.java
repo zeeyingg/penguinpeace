@@ -22,9 +22,9 @@ public class BST
   /**
    * default constructor
    */
-  BST()
+  public BST()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    
   }
 
 
