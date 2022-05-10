@@ -155,7 +155,18 @@ public class BST
      *****************************************************/
     public int numLeaves()
     {
-    	/*** YOUR IMPLEMENTATION HERE ***/
+    	TreeNode _currNode = _root;
+      int countLeaves = 0;
+      while (_currNode != null){
+        _currNode = _currNode.getLeft();
+      }
+      countLeaves++
+      _currNode = _root;
+      while (_currNode != null){
+        _currNode = _currNode.getRight();
+        countLeaves++;
+      }
+      return countLeaves + 1;
     }
 
 
