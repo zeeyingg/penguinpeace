@@ -1,4 +1,13 @@
 /**
+ * Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
+ * APCS pd08
+ * HW95 -- Algorithm as Data Structure
+ * 2022-05-09f
+ * time spent: 1 hrs
+ */
+
+
+/**
  * class TreeNode
  * SKELETON
  * Implements a node for use in a binary tree.
