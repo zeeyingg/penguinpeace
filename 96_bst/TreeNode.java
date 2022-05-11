@@ -1,5 +1,4 @@
 /**
-<<<<<<< HEAD
  * Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
  * APCS pd08
  * HW96 -- BSTs is the Perfect Place for Shade
@@ -8,8 +7,6 @@
  */
 
 /**
-=======
->>>>>>> 151f68e632a68542a2cce48c076fb4fb29e73154
  * class TreeNode
  * SKELETON
  * Implements a node for use in a binary tree.
