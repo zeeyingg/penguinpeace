@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
  * APCS pd08
  * HW96 -- BSTs is the Perfect Place for Shade
@@ -7,6 +8,8 @@
  */
 
 /**
+=======
+>>>>>>> 151f68e632a68542a2cce48c076fb4fb29e73154
  * class BST
  * v1:partial
  * SKELETON
@@ -113,7 +116,10 @@ public class BST
   {
     postOrderTrav( _root );
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> 151f68e632a68542a2cce48c076fb4fb29e73154
   public void postOrderTrav( TreeNode currNode )
   {
     if ( currNode == null )
@@ -133,6 +139,7 @@ public class BST
      *****************************************************/
     TreeNode search( int target )
     {
+<<<<<<< HEAD
     	return search(_root, target);
     }
 
@@ -149,6 +156,9 @@ public class BST
         return search(stRoot.getRight(), target);
       }
       return null; //unreachable
+=======
+    	/*** YOUR IMPLEMENTATION H*** YOUR IMPLEMENTATION HERE ***/
+>>>>>>> 151f68e632a68542a2cce48c076fb4fb29e73154
     }
 
     /*****************************************************
@@ -179,6 +189,7 @@ public class BST
      *****************************************************/
     public int numLeaves()
     {
+<<<<<<< HEAD
       return numLeaves( _root );
     }
 
@@ -191,6 +202,23 @@ public class BST
       return numLeaves(stRoot.getLeft()) + numLeaves(stRoot.getRight());
     }
 
+=======
+    	TreeNode _currNode = _root;
+      int countLeaves = 0;
+      while (_currNode != null){
+        _currNode = _currNode.getLeft();
+      }
+      countLeaves++
+      _currNode = _root;
+      while (_currNode != null){
+        _currNode = _currNode.getRight();
+        countLeaves++;
+      }
+      return countLeaves + 1;
+    }
+
+
+>>>>>>> 151f68e632a68542a2cce48c076fb4fb29e73154
   //main method for testing
   public static void main( String[] args )
   {
@@ -204,9 +232,12 @@ public class BST
     arbol.insert( 6 );
     arbol.insert( 1 );
     arbol.insert( 3 );
+<<<<<<< HEAD
     arbol.insert( 0 );
     arbol.insert( 2 );
     arbol.insert( 4 );
+=======
+>>>>>>> 151f68e632a68542a2cce48c076fb4fb29e73154
 
     System.out.println( "\n-----------------------------");
     System.out.println( "pre-order traversal:" );
@@ -221,6 +252,7 @@ public class BST
     arbol.postOrderTrav();
 
     System.out.println( "\n-----------------------------");
+<<<<<<< HEAD
 
     System.out.println("Testing numLeaves().....");
     System.out.print(arbol.numLeaves()); // expected 3
@@ -231,6 +263,8 @@ public class BST
     System.out.println(arbol.search(2).getValue()); 
     System.out.println(arbol.search(7)); //expected null 
 
+=======
+>>>>>>> 151f68e632a68542a2cce48c076fb4fb29e73154
     /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
