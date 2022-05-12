@@ -1,0 +1,18 @@
+Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
+APCS pd08
+HW97 -- Prune Your Tree
+2022-05-11f
+time spent: 1 hrs
+ 
+DISCO:
+* Always look for the smallest value on the rightside to use as a replacement for
+* Getting rid of nodes with one child is easy! Two children is a different story
+
+QCC:
+* How do you use piggybacking in order to come up with a working remove()? 
+* Is it possible to make remove() recursive?
+
+ALGO:
+* Recurse through the tree until you reached the node that should be removed
+* If the node has no or one children, then replace the node's current value with its left or right value
+* If the node has two children, find the smallest value on the right branch and replace the node
