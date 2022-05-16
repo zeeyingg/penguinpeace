@@ -1,0 +1,15 @@
+/**
+ * Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
+ * APCS pd08
+ * HW99 -- Some Are More Equal Than Others, Codified
+ * 2022-05-13f
+ * time spent: 1 hrs
+ */
+
+ DISCO:
+* PriorityQueue is a lot simpler to implement if you don't have to worry about different comparable types
+* ArrayList methods work very nicely to make an ordered list
+
+QCC:
+* Will making ArrayPriorityQueue type-neutral involve simply changing the type of cargo to a generic comparable type?
+* Could you call this Queue a subclass of ArrayList (and is it possible to implement it as such)?
