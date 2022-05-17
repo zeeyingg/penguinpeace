@@ -1,0 +1,17 @@
+/**
+ * Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
+ * APCS pd08
+ * HW101 -- Heap o'Trouble
+ * 2022-05-16f
+ * time spent: 1 hrs
+ */
+
+ DISCO:
+ * Sleep is incredibly, incredibly important.
+ * The heap invariant is that the left subtree is never greater than the root
+and vice versa for the right subtree
+  * Building a binary heap is similar to maintaining the invariant of the
+  array priority queue
+
+ QCC:
+ * What should each swap be contingent on? The node or the node's values?

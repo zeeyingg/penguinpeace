@@ -1,0 +1,12 @@
+/**
+ * Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
+ * APCS pd08
+ * HW101 -- Heap o'Trouble
+ * 2022-05-16f
+ * time spent: 1 hrs
+ */
+
+ ALGO FOR DELETION
+ 1. Remove the node
+ 2. Move its children from the smallest subtree to replace the missing node
+ 3. Set the last node to null
