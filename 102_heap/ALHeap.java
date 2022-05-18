@@ -1,8 +1,28 @@
 /**
+ * Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
+ * APCS pd08
+ * HW101 -- Heap o'Trouble
+ * 2022-05-16f
+ * time spent: 1 hrs
+
+
+ DISCO:
+ * Heapify is just a way of recursively swapping elements!
+ * The visualizer was amazing for this assignment and should def be utilized more
+ * The array places all the elements on each level
+
+ QCC:
+ * How do we get heapify to work?
+ * What is the purpose of some of these helper methods if we don't utilize them?
+
+ */
+
+/**
  * class ALHeap
  * SKELETON
  * Implements a min heap using an ArrayList as underlying container
  */
+
 
 import java.util.ArrayList;
 
