@@ -48,25 +48,28 @@ public class Heapsort
       int maxChildPos;
 
       while( pos < lastLeaf ) {
-
         //choose child w/ max value, or check for child
-
+        minChildPos = pos*2+1;
+        maxChildPos = pos*2+2;
         //if no children, then i've walked far enough
-        if ( maxChildPos == -1 )
+        if ( maxChildPos == -1 || minChildPos == -1)
           break;
         //if i am greater than my greatest child, i've walked far enough
-        else if (  )
+        else if ( _heap.get(pos) > _heap.get(minChildPos) && _heap.get(pos) > _heap.get(maxChildPos) )
           break;
         //if i am > least child, swap with that child
         else {
-
+          if ( _heap.get(maxChildPos) > _heap.get(minChildPos) ){
+            int leastVal = minChildPos;
+          } else if (_heap.get(maxChildPos) < _heap.get(minChildPos)){
+            leastVal = maxChildPos;
+          }
+            swap(pos, leastVal);
         }
       }
-
+      lastLeaf = tmp;
       //overwrite last leaf with old root val
-
     }
-
 
     //STEP teh LAST: return modified array
     return data;
