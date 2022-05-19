@@ -16,9 +16,11 @@
    (input.nums provided; must be in same dir)
 
    -------------------------
-   Clyde "Thluffy" Sinclair
-   APCS
-   2018-05-17
+  * Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
+  * APCS pd08
+  * HW103 -- Erica's Friends, Hugo, and The One in the Middle
+  * 2022-05-18
+  * time spent: 1 hrs
 */
 
 import java.util.Scanner;
@@ -28,7 +30,7 @@ public class RunMedDriver
   public static void main( String[] args )
   {
 
-    // RunMed r = new RunMed();
+    RunMed r = new RunMed();
 
     int n;
     double median;
@@ -43,9 +45,9 @@ public class RunMedDriver
         count++;
         System.out.print("this many ints have been seen: " + count + "\n");
 
-        // r.add(n);
-        // median = r.getMedian();
-        // System.out.print("median is now " + median + "\n");
+        r.add(n);
+        median = r.getMedian();
+        System.out.print("median is now " + median + "\n");
       } catch (Exception e) {
         System.err.println("BOOP! probs w yer input:\n"+e);
       }

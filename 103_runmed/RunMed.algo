@@ -1,0 +1,15 @@
+/**
+ * Eddie's Fanclub :: Ziying Jian, Andrey Sokolov, Joshua Gao
+ * APCS pd08
+ * HW103 -- Erica's Friends, Hugo, and The One in the Middle
+ * 2022-05-18
+ * time spent: 1 hrs
+ **/
+
+1. If next value < root of maxheap, add to maxheap
+    else add to minheap
+2. balance heaps (size differences < 2)
+   (remove from larger heap, add to smaller until balanced)
+3. at any time, find med by
+    a) heap sizes equal: mid is mean of roots
+    b) heap sizes !equal: med is root of larger heap
